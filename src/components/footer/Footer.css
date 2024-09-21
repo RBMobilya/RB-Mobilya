@@ -30,8 +30,15 @@
     color: #ffc107; /* Yellow on hover */
   }
   
-  .footer-bottom-text {
-    font-size: 0.9rem;
-    color: #ffc107; /* Yellow text */
+
+
+
+  @media (max-width: 576px) {
+    .footer .footer-bottom {
+      text-align: center;
+    }
+    
+    .footer .social-icons {
+      justify-content: center; /* Center icons on small screens */
+    }
   }
-  

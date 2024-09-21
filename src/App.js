@@ -2,9 +2,9 @@
 import { BrowserRouter } from 'react-router-dom';
 import Header from './components/header/Header';
 import "bootstrap/dist/css/bootstrap.min.css"
-import Routes from './myroutes/Routes';
 import Home from './pages/Home';
 import Footer from './components/footer/Footer';
+import MyRoutes from './myroutes/MyRoutes';
 // import { Provider } from 'react-redux';
 
 function App() {
@@ -13,7 +13,7 @@ return (
 
   <BrowserRouter>
     <Header/>
-     <Routes/>
+     <MyRoutes/>
      <Footer/>
       {/* <ins className='adsbygoogle'
           style={{ display: 'block' }}

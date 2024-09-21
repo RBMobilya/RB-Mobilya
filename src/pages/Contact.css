@@ -1,0 +1,37 @@
+
+  
+  .about-contact-section h2 {
+    font-size: 2rem; /* Title size */
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .about-contact-section p {
+    font-size: 1rem; /* Adjust text size as needed */
+    line-height: 1.5; /* Improves readability */
+    margin-bottom: 1.5rem; /* Adds space between paragraphs */
+  }
+  .info-cards .card {
+    border-radius: 10px;
+    background-color: #f8f9fa;
+  }
+  
+  .info-cards .card-body h5 {
+    font-weight: bold;
+    font-size: 32px;
+  } 
+  
+  .info-cards .card-body .text-warning {
+    font-size: 1.25rem;
+  }
+  
+  .info-cards .card-body p {
+    color: 'rgba(0;0;0;0.91)';
+    font-size: 22;
+    font-family: 'Space Grotesk';
+    font-weight: '400';
+    line-height: 37px;
+    word-wrap: 'break-word'
+  }
+
+  

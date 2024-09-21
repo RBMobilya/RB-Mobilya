@@ -2,16 +2,14 @@
     background-color: #f8f9fa;
   }
   
-  .product-section .card {
-    transition: transform 0.3s;
-  }
-  
-  .product-section .card:hover {
-    transform: scale(1.05);
-  }
+ 
   
   .product-section .card-title {
-    font-size: 1.2rem;
+    color: 'black';
+font-size: 18;
+font-family: 'Space Grotesk';
+font-weight: '400';
+word-wrap: 'break-word'
   }
   
   .product-section .card-text {
@@ -58,30 +56,69 @@
     z-index: 1;
   }
 /* Category section  */
-  .category-section {
-    background-color: #f8f9fa;
-  }
+/* Category Section Styles */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.karousel-item {
+  min-width: 20%; /* Each card occupies 20% of the width (5 cards) */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.carousel-item-img{
+  width: 100%;
+}
+
+.carousel-item-caption {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.left-btn {
+  left:-30px;
+}
+
+.right-btn {
+  right: -30px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
   
-  .category-section .card {
-    transition: transform 0.3s ease;
-  }
-  
-  .category-section .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .category-section .card img {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .category-section .card-title {
-    color: 'black';
-    font-size: 18;
-    font-family: 'Space Grotesk';
-    font-weight: '400';
-    word-wrap: 'break-word'
-  }
 /* About section */
   .about-section {
     position: relative;
@@ -165,3 +202,39 @@
       margin-bottom: 20px;  /* Adds spacing for mobile */
     }
   }
+
+
+/* Category section */
+/* RESPONSIVENESS */
+
+/* Medium Screens (Tablets): Show 3 items */
+@media (max-width: 1024px) {
+  .karousel-item {
+    min-width: 33.33%; /* Show 3 items */
+  }
+
+  /* Adjust button positions */
+  .left-btn {
+    left: -40px; /* Slightly move the buttons closer for smaller screens */
+  }
+
+  .right-btn {
+    right: -40px;
+  }
+}
+
+/* Small Screens (Mobile): Show 1 item */
+@media (max-width: 768px) {
+  .karousel-item {
+    min-width: 100%; /* Show 1 item */
+  }
+
+  /* Move buttons inside the container for better UX on small screens */
+  .left-btn {
+    left: 10px;
+
+  }
+  .right-btn{
+    right: 10px;
+  }
+}

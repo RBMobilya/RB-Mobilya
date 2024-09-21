@@ -5,16 +5,20 @@ import './Footer.css'; // Custom CSS for styling
 
 const Footer = () => {
   return (
+
+    <>
+
+
     <footer className="footer bg-dark text-light py-5">
       <Container>
         <Row>
           {/* Logo Section */}
-          <Col xs={12} md={4} className="mb-4">
+          <Col xs={12} md={3} className="mb-4">
             <img src="/image/Footer-logo.png" alt="Logo" className="footer-logo mb-3" /> {/* Replace with your logo */}
           </Col>
 
           {/* Company Information */}
-          <Col xs={12} md={2} className="mb-4">
+          <Col xs={12} md={3} className="mb-4">
             <h5 className="text-warning">Şirkət</h5>
             <ul className="list-unstyled">
               <li><a href="#">Haqqımızda</a></li>
@@ -27,7 +31,7 @@ const Footer = () => {
           </Col>
 
           {/* Legal & Information */}
-          <Col xs={12} md={2} className="mb-4">
+          <Col xs={12} md={3} className="mb-4">
             <h5 className="text-warning">İnformasiyaya</h5>
             <ul className="list-unstyled">
               <li><a href="#">İstifadəçi razılaşması</a></li>
@@ -40,36 +44,42 @@ const Footer = () => {
           </Col>
 
           {/* Contact Info */}
-          <Col xs={12} md={2} className="mb-4">
+          <Col xs={12} md={3} className="mb-4">
             <h5 className="text-warning">Əlaqə</h5>
             <ul className="list-unstyled">
               <li>Mobil nömrə: +994 123 45 67</li>
               <li>Ofis nömrəsi: (012) 234 456</li>
             </ul>
-         
-          </Col>
-          <Col xs={12} md={2} className="mb-4">
-
-          <h5 className="text-warning">Sosial Medya</h5>
+            <h5 className="text-warning">Sosial Medya</h5>
             <div className="social-icons">
               <a href="#"><FaWhatsapp className="text-light mx-2" size={24} /></a>
               <a href="#"><FaInstagram className="text-light mx-2" size={24} /></a>
               <a href="#"><FaFacebook className="text-light mx-2" size={24} /></a>
             </div>
-            </Col>
+          </Col>
+          {/* <Col xs={12} md={3} className="mb-4">
+
+    
+            </Col> */}
 
         </Row>
 
         {/* Footer Bottom Section */}
-        <Row>
-          <Col className="text-center mt-4">
-            <p className="footer-bottom-text text-warning">
+      
+      </Container>
+      {/* <Row>
+          <Col className="text-center mt-4 ">
+            <p className="footer-bottom-text bg-warning  py-2">
               Sədərək Ticarət Mərkəzi / Beton Yolu 12-ci sıra ilə üzbəüz, Baku, Azerbaijan
             </p>
           </Col>
-        </Row>
-      </Container>
+        </Row> */}
     </footer>
+    <div style={{color:'white'}} className="footer-bottom bg-warning text-center py-2">
+        Sədərək Ticarət Mərkəzi / Beton Yolu 12-ci sıra ilə üzbə üz, Baku, Azerbaijan
+      </div>
+    </>
+
   );
 };
 

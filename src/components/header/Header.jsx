@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, InputGroup } from 'react-bootstrap';
 import SearchIcon from '@mui/icons-material/Search';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
-
+import { Link } from 'react-router-dom';
 
 const Header = ({ onSearch }) => {
 
@@ -30,15 +30,18 @@ const Header = ({ onSearch }) => {
           {/* Logo Section */}
           <Col md={3}>
             <a href="#" className="navbar-brand">
-              <img src="/image/logo.png" alt="Logo" style={{ height: '40px' }} />
+           <Link to='/'>
+            <img src="/image/logo.png" alt="Logo" style={{ height: '40px' }} />
+
+            </Link>
             </a>
           </Col>
 {/* təklifler məhsullar əlaqə */}
            <Col md={6}>
            <div  style={{width: '100%', height: '100%', justifyContent: 'flex-start', alignItems: 'center', gap: 40, display: 'inline-flex'}}>
              <div style={{width: 104 ,height: 16, textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Xüsusi Təkliflər</div>
-             <div style={{width: 72, height: 16, textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Məhsullar</div>
-             <div style={{width: 43, height: 16, textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Əlaqə</div>
+             <Link to='/allproducts' style={{width: 72, height: 16, textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Məhsullar</Link>
+             <Link to='/contact' style={{width: 43 ,height: 16,textDecoration:"none", textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Əlaqə</Link>
            </div>
           </Col>
           {/* Search Bar Section */}
