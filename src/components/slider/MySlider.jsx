@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import './Slider.css';
+import { Link } from "react-router-dom";
 
 
 const backgroundSlides = [
@@ -43,9 +44,9 @@ return(
       <Button
         variant="primary"
         size="lg"
-        style={{ borderRadius: '30px', padding: '6px 30px', fontSize: '20px',background:"white",fontFamily:"mulish" }}
+        style={{ borderRadius: '30px', padding: '10px 50px',background:"white" }}
       >
-        İNDİ AL 
+        <Link to={'/'}>indi al </Link> 
       </Button>
     </div>
   </div>   

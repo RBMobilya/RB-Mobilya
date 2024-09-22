@@ -14,10 +14,10 @@ console.log(filters);
   const handleCategoryChange = (e) => {
     setFilters((prev) => ({ ...prev, category: e.target.value }));
   };
-  const handleColorChange = (colorName) => {
-    setFilters((prev) => ({ ...prev, color: colorName }));
+  const handleColorChange = (e) => {
+    setFilters((prev) => ({ ...prev, color: e.target.value }));
   };
-
+console.log(filters)
   return (
     <div className="filter-sidebar">
     
@@ -110,7 +110,7 @@ console.log(filters);
                     name="color"
                     style={{display:'none'}}
                     value={color.name}
-                    onChange={handleColorChange(color.name)}
+                    onChange={(e) => handleColorChange(e, color.name)} 
                   />
                   <span className={`color-box ${filters.color === color.name ? 'active' : ''}`} style={{ backgroundColor: color.code }}></span>
                   {color.name}

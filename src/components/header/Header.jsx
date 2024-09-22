@@ -40,7 +40,7 @@ const Header = ({ onSearch }) => {
            <Col md={6}>
            <div  style={{width: '100%', height: '100%', justifyContent: 'flex-start', alignItems: 'center', gap: 40, display: 'inline-flex'}}>
              <div style={{width: 104 ,height: 16, textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Xüsusi Təkliflər</div>
-             <Link to='/allproducts' style={{width: 72, height: 16, textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Məhsullar</Link>
+             <Link to='/allproducts' style={{width: 72, height: 16,textDecoration:'none' ,textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Məhsullar</Link>
              <Link to='/contact' style={{width: 43 ,height: 16,textDecoration:"none", textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Əlaqə</Link>
            </div>
           </Col>

@@ -1,0 +1,27 @@
+.hero-section h1{
+    font-family: 'Space Gortesk';
+    font-size: 48px;
+    font-weight: 700;
+    word-wrap: 'break-word'
+}
+
+.hero-section p{
+    font-family: 'Space Gortesk';
+    font-size: 48;
+    font-weight: 400;
+    word-wrap: 'break-word'
+}
+
+
+.hero-section button a{
+    font-family: 'Mulish';
+    color: #2E2E2E;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.40px;
+    text-decoration: none;
+}
+
+
+

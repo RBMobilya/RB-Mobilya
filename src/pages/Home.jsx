@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import MySlider from "../components/slider/MySlider";
+import { Link } from "react-router-dom";
 
 
 
@@ -147,8 +148,8 @@ const bestsellerItems= bestseller
         <Container>
           <Row className="text-center mb-4">
             <Col>
-              <h2 style={{ fontFamily: 'Space Grotesk', fontSize: '40' }} className="display-5">Rahatlıq və Harmoniyanı Öz Evində Birləşdir</h2>
-              <p style={{ fontFamily: 'Space Grotesk', fontSize: '18', color: '#7F7F7F' }} className="lead">Eviniz üçün dünyanın ən qəşəng malları. Hamısı düşünülmüş şəkildə hazırlanmış və etik qaydalara uyğun olaraq yaradılmışdır.</p>
+              <h2 style={{color: '#141414', fontSize: 40,  fontWeight: '700',  wordWrap: 'break-word'}} className="display-5">Rahatlıq və Harmoniyanı Öz Evində Birləşdir</h2>
+              <p style={{ color: '#7F7F7F',fontSize:'18px',fontWeight:'700',wordBreak:'break-word' }} >Eviniz üçün dünyanın ən qəşəng malları. Hamısı düşünülmüş şəkildə hazırlanmış və etik qaydalara uyğun olaraq yaradılmışdır.</p>
             </Col>
           </Row>
 
@@ -188,8 +189,8 @@ const bestsellerItems= bestseller
                  <div key={bestsell.id}  className="karousel-item">
                    <img className="carousel-item-img" variant="top" src={bestsell.image} alt={bestsell.title} />
                    <div className="d-flex flex-column">
-                      <div className="carousel-item-caption">{bestsell.title}</div>
-                      <div style={{ color: '#E6AA04', textAlign:'center' }} className="mt-auto  fw-bold">{bestsell.price}</div>
+                      <div style={{fontFamily:'Space Gortesk',fontWeight:'400',fontSize:'16px'}} className="carousel-item-caption">{bestsell.title}</div>
+                      <div style={{ color: '#E6AA04', textAlign:'center',fontFamily:'Space Gortesk',wordWrap:'break-word' }} className="mt-auto  fw-bold">{bestsell.price}</div>
                     </div>
                   </div>
                 ))}
@@ -215,20 +216,23 @@ const bestsellerItems= bestseller
 
       <div className="section-4 d-flex justify-content-center align-items-center">
         <div className="section4-content text-center">
-          {/* <h1 className="text-white display-5">Yeni Kampaniyalar Artıq Əlçatandır</h1>
+          <h1 className="text-white display-5">Yeni Kampaniyalar Artıq Əlçatandır</h1>
         <p className="text-white lead">
           Evinizi ifadə etmək üçün 300-dən çox yol alın.
-        </p> */}
-          {/* <Button
+        </p>
+          <Button
           className="cta-btn"
           variant="light"
           size="lg" 
-          style={{ borderRadius: '30px', padding: '10px 30px', fontSize: '18px' }}
+          style={{ borderRadius: '30px', padding: '10px 30px', fontSize: '18px',background:'white' }}
         >
-          DAHA ÇOX
-        </Button> */}
+          <Link to='/'> DAHA ÇOX</Link>
+        </Button>
         </div>
       </div>
+
+
+      
       {/* Categories */}
       <section className="category-section py-5">
 
@@ -267,18 +271,17 @@ const bestsellerItems= bestseller
       </section>
       {/* About section  */}
       <div className="about-section d-flex justify-content-center align-items-center">
-        <div className="overlay"></div>
         <div className="about-content text-center">
-          {/* <h2 className="text-white">Haqqımızda Daha Ətraflı</h2>
+          <h2 className="text-white">Haqqımızda Daha Ətraflı</h2>
         <p className="text-white">Evinizi ifadə etmək üçün 300-dən çox yol alın.</p>
         <Button
           className="cta-btn"
-          variant="light"
+          variant="primary"
           size="lg"
           style={{ borderRadius: '30px', padding: '10px 30px', fontSize: '18px' }}
         >
-          DAHA ÇOX
-        </Button> */}
+        <Link to='/' >DAHA ÇOX</Link>
+        </Button>
         </div>
       </div>
 
@@ -300,8 +303,8 @@ const bestsellerItems= bestseller
                 <div className="h-100 ">
                   <Card.Img variant="top" src={testimonial.image} alt={testimonial.name} />
                   <Card.Body style={{ marginTop: '13px' }}>
-                    <Card.Title className="fw-bold">{testimonial.name}</Card.Title>
-                    <Card.Text className="text-muted">{testimonial.feedback}</Card.Text>
+                    <Card.Title  >{testimonial.name}</Card.Title>
+                    <Card.Text  >{testimonial.feedback}</Card.Text>
                   </Card.Body>
                 </div>
               </Col>

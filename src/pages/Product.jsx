@@ -11,8 +11,6 @@ const Product = ({ product }) => {
     setSelectedColor(index);
 
   };
-console.log(selectedImage);
-console.log(selectedColor);
 
   return (
     <div className="product-card h-100">

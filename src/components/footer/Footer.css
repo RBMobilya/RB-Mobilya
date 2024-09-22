@@ -1,3 +1,4 @@
+
 .footer {
     background-color: #222;
     color: #f8f9fa;
@@ -6,15 +7,22 @@
   .footer-logo {
     max-width: 150px;
   }
-  
+  .footer ul li {
+    font-family: 'Space Gortesk';
+
+  }
+
   .footer h5 {
     margin-bottom: 1rem;
     font-weight: bold;
+    font-family: 'Space Gortesk';
   }
   
   .footer a {
     color: #f8f9fa;
     text-decoration: none;
+    font-family: 'Space Gortesk';
+
   }
   
   .footer a:hover {
@@ -24,6 +32,7 @@
   .social-icons a {
     color: #f8f9fa;
     transition: color 0.3s ease;
+    
   }
   
   .social-icons a:hover {

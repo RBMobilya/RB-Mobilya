@@ -1,3 +1,5 @@
+
+
 /* General layout */
 .all-products-page {
   display: flex;
@@ -24,6 +26,7 @@
 .filter-group h3 {
   margin-bottom: 10px;
   font-weight: bold;
+  font-family: 'Space Gortesk';
 }
 
 .filter-group ul {
@@ -65,9 +68,11 @@
   transition: all 0.3s ease;
 }
 
-.custom-radio:checked + .category-label::before {
-  background-color: yellow;
-  border-color: yellow;
+.custom-radio:checked  + .category-label::before{
+  background-color: rgba(255, 187, 0, 1);
+}
+.custom-radio:checked  + .category-label{
+  color: rgba(255, 187, 0, 1);
 }
 
 .filter-group a {
@@ -196,9 +201,12 @@
   margin-right: 8px;
   border-radius: 50%;
   border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
 }
 .color-box.active {
-  border-color: #f1c40f; /* Yellow border */
+  box-shadow: 0 0 0 3px #EBEBEB; /* Yellow border with a distance */
+  transform: scale(1); /* Yellow border */
 }
 /* Product Card */
 .product-card {
@@ -216,7 +224,7 @@
 .product-card h5 {
   color: '#141414';
   font-size: 16;
-  font-family: 'Space Grotesk';
+  font-family: 'Space-Gortesk';
   font-weight: '400';
   word-break: 'break-word'  
 }
