@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { products, categories,Mycolors } from '../data/Data'; // Centralized data
 import Filters from './Filters';  // Separate Filters component
 import Product from './Product';  // Separate Product component
-import '../pages/Products.css'
+import '../pages/Products.css';
 import { Col, Container, Row } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 const Allproducts = () => {
+  const { categoryName } = useParams();
+  useEffect(() => {
+    if (categoryName) {
+      setFilters((prev) => ({ ...prev, category: categoryName }));
+    }
+  }, [categoryName]);
+
   const [filters, setFilters] = useState({
     category: '',
     minPrice: 0,
     maxPrice:8000,
     color: ''
   });
-
   // Filter products based on selected filters
   const filteredProducts = (products || []).filter((product) => {
     const categoryMatch = filters.category === '' || product.category === filters.category;
@@ -19,6 +26,7 @@ const Allproducts = () => {
     const colorMatch = filters.color === '' || product.colors.some(c => c.name === filters.color);
     return categoryMatch && priceMatch && colorMatch;
   });
+
   return (
     <Container>
     <h2>All Products</h2>   

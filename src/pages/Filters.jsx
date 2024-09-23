@@ -2,7 +2,6 @@ import React from 'react';
 import './Products.css';
 const Filters = ({ filters, setFilters, categories,Mycolors }) => {
   
-console.log(filters);
 
   const handleMinPriceChange = (e) => {
     setFilters((prev) => ({ ...prev, minPrice: Math.min(e.target.value, filters.maxPrice - 100) }));
@@ -17,7 +16,6 @@ console.log(filters);
   const handleColorChange = (e) => {
     setFilters((prev) => ({ ...prev, color: e.target.value }));
   };
-console.log(filters)
   return (
     <div className="filter-sidebar">
     
@@ -30,14 +28,15 @@ console.log(filters)
            type="radio"
           name="category"
           id={`category-${index}`}
-          value={category}
+          value={category.name}
+          checked={filters.category === category.name}
           onChange={handleCategoryChange}
           className="custom-radio"
               
             />
               
               <label htmlFor={`category-${index}`} className="category-label">
-                  {category}
+                  {category.name}
               </label>
 
         </li>

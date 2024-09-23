@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Products.css';
+import { Link } from 'react-router-dom';
 const Product = ({ product }) => {
   const [selectedImage, setSelectedImage] = useState(product.defaultImage);
   const [selectedColor, setSelectedColor] = useState(0);
@@ -9,13 +10,13 @@ const Product = ({ product }) => {
   const handleColorChange = (image,index) => {
     setSelectedImage(image);
     setSelectedColor(index);
-
   };
 
   return (
     <div className="product-card h-100">
+    <Link to={`/product/${product.id}`}>
     <img style={{background:' linear-gradient(0deg, white 0%, white 100%)',width:'100%'}} src={selectedImage} alt={product.name} />
-      
+    </Link>
       <div className="card-body text-center">
       <h5>{product.name}</h5>
       <p>{product.price} ₼</p>

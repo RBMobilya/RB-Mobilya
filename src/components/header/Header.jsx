@@ -3,16 +3,15 @@ import { Container, Row, Col, Form, Button, InputGroup } from 'react-bootstrap';
 import SearchIcon from '@mui/icons-material/Search';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import { Link } from 'react-router-dom';
-
+import { categories } from '../../data/Data';
 const Header = ({ onSearch }) => {
-
+// console.log(categories);
     const [searchTerm, setSearchTerm] = useState('');
   
     const handleSearch = (e) => {
       e.preventDefault();
       onSearch(searchTerm);  // Trigger the search action
     };
-  
   return (
     <header className="header  bg-light "style={{position:"realtive"}}>
 
@@ -40,7 +39,7 @@ const Header = ({ onSearch }) => {
            <Col md={6}>
            <div  style={{width: '100%', height: '100%', justifyContent: 'flex-start', alignItems: 'center', gap: 40, display: 'inline-flex'}}>
              <div style={{width: 104 ,height: 16, textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Xüsusi Təkliflər</div>
-             <Link to='/allproducts' style={{width: 72, height: 16,textDecoration:'none' ,textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Məhsullar</Link>
+             <Link to='/products' style={{width: 72, height: 16,textDecoration:'none' ,textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Məhsullar</Link>
              <Link to='/contact' style={{width: 43 ,height: 16,textDecoration:"none", textAlign: 'center', color: '#7F7F7F', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Əlaqə</Link>
            </div>
           </Col>
@@ -86,26 +85,17 @@ const Header = ({ onSearch }) => {
                 </button>
                 <div className="collapse navbar-collapse " id="navbarNav">
                   <ul style={{width: '100%', height: '100%',justifyContent: 'flex-start', alignItems: 'center', gap: 60, display: 'inline-flex'}}className="navbar-nav">
-                    <li className="nav-item">
-                      <a style={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}} className="nav-link" href="#">Çay Seti</a>
-                    </li>
-                    <li className="nav-item">
-                      <a style={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}} className="nav-link " href="#">Qəhvə Masası</a>
-                    </li> <li className="nav-item">
-                      <a style={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}} className="nav-link" href="#">Masalar</a>
-                    </li> <li className="nav-item">
-                      <a style={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}} className="nav-link" href="#">Oturacaqlar</a>
-                    </li> <li className="nav-item">
-                      <a style={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}} className="nav-link" href="#">Divan/Kreslo</a>
-                    </li> <li className="nav-item">
-                      <a style={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}} className="nav-link" href="#">Bağ mebeli</a>
-                    </li> <li className="nav-item">
-                      <a style={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}} className="nav-link" href="#">TV Stendi</a>
-                    </li> <li className="nav-item">
-                      <a style={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}  className="nav-link" href="#">Mətbəs</a>
-                    </li> <li className="nav-item">
-                      <a style={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}  className="nav-link" href="#">Digər</a>
-                    </li>
+                  {
+                    categories.map((catgory)=>(
+                      <li key={catgory.id} className="nav-item">
+                        <Link to={`/products/category/${catgory.name}`} style={{ textAlign: 'center', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}} className="nav-link"  >
+                         {catgory.name}
+                         </Link>
+                      </li>
+                    ))
+                  }
+                    
+                   
                     {/* Add more nav items as necessary */}
                   </ul>
                 </div>
