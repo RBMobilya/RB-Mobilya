@@ -4,42 +4,65 @@ export const categories = [
   {
     id: 0,
     name: "Çay Seti",
+    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
+    image: "/image/Xalcalar.png",
+
   },
   {
     id: 1,
     name: "Qəhvə Masası",
+    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
+    image: "/image/Uzlukler.png",
+
   },
   {
     id: 2,
     name: "Masalar",
+    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
+    image: "/image/Aksesuarlar.png",
+
   },
   {
     id: 3,
     name: "Oturacaq",
+    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
+    image: "/image/Aksesuarlar.png",
   },
   {
     id: 4,
     name: "Divan&Kreslo",
+    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
+    image: "/image/Uzlukler.png",
   },
   {
     id: 5,
     name: "Bağ Mebeli",
+    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
+    image: "/image/Xalcalar.png",
   },
   {
     id: 6,
     name: "TV Stend",
+    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
+    image: "/image/Xalcalar.png",
   },
   {
     id: 7,
     name: "Saat",
+    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
+    image: "/image/Uzlukler.png",
   },
   {
     id: 8,
     name: "Yataq Otağı",
+    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
+    image: "/image/Xalcalar.png",
   },
   {
     id: 9,
     name: "Motbox",
+    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
+    image: "/image/Uzlukler.png",
   },
 ];
 //   image: '/image/ofis.png'
@@ -122,9 +145,38 @@ export const products = [
       "/image/divan5.png",
     ],
     colors: [
-      { name: "Ağ", code: "#f5f5f5", image: "/image/ofis.png" },
-      { name: "Qara", code: "#d94a3f", image: "/image/metbex.png" },
-      { name: "Yaşıl", code: "#5a7f6f", image: "/image/chesterfield.png" },
+      {
+        name: "Ağ",
+        code: "#f5f5f5",
+        images: [
+          "/image/metbex.png",
+          "/image/divan3_white.png",
+          "/image/divan4_white.png",
+        ],
+        defaultColorImage:'/image/Aksesuarlar.png'
+      },
+      {
+        name: "Qara",
+        code: "#d94a3f",
+        images: [
+          "/image/divan4.png",
+          "/image/divan3_white.png",
+          "/image/divan4_white.png",
+        ],
+        defaultColorImage:'/image/AboutSection.png'
+
+      },
+      {
+        name: "Boz",
+        code: "#5a7f6f",
+        images: [
+          "/image/divan5.png",
+          "/image/divan3_white.png",
+          "/image/divan4_white.png",
+        ],
+        defaultColorImage:'/image/Aksesuarlar.png'
+
+      },
     ],
     defaultImage: "/image/amuntabi.png",
     description:

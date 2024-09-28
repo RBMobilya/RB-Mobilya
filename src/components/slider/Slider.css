@@ -1,27 +1,37 @@
-.hero-section h1{
-    font-family: 'Space Gortesk';
-    font-size: 48px;
-    font-weight: 700;
-    word-wrap: 'break-word'
+.hero-section h1 {
+  font-family: "Space Grotesk";
+  font-size: 48px;
+  font-weight: 700;
+  word-wrap: "break-word";
 }
 
-.hero-section p{
-    font-family: 'Space Gortesk';
-    font-size: 48;
-    font-weight: 400;
-    word-wrap: 'break-word'
+.hero-section p {
+  font-family: "Space Grotesk";
+  font-size: 48;
+  font-weight: 400;
+  word-wrap: "break-word";
 }
 
+.hero-section button  {
+  font-family: "Mulish";
+  color: #2e2e2e;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  text-decoration: none;
+  padding: 10px 50px;
 
-.hero-section button a{
-    font-family: 'Mulish';
-    color: #2E2E2E;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2.40px;
-    text-decoration: none;
 }
 
-
-
+@media (max-width: 768px) {
+    .hero-section h1{
+        font-size: 30px;
+    }
+    .hero-section p {
+    font-size: 18px
+    }
+    .hero-section .hero-content button{
+    padding: 5px 40px;
+    }
+}

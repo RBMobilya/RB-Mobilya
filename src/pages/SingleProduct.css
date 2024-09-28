@@ -61,7 +61,7 @@
   margin-bottom: 0.5rem;
 }
 
-.color-options {
+.color-options2 {
   display: flex;
   gap: 10px;
   flex-direction: row;
@@ -278,12 +278,12 @@
 .carousel-item-caption2 {
   text-align: center;
   margin-top: 10px;
-  font-family: "Space Gortesk";
+  font-family: "Space Grotesk";
   font-size: 16px;
   font-weight: 400;
 }
 .price {
   color: #e6aa04;
   text-align: center;
-  font-family: Space Gortesk;
+  font-family: Space Grotesk;
 }

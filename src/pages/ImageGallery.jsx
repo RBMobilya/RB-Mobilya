@@ -4,7 +4,7 @@ import "./SingleProduct.css";
 
 const ImageGallery = ({ images, defaultImage}) => {
   const allImages = [defaultImage, ...images];
-
+console.log(defaultImage)
   // Set the selected image to the default image initially
   const [selectedImage, setSelectedImage] = useState(defaultImage);
   useEffect(() => {

@@ -1,31 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Button } from "@mui/material";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
 import MySlider from "../components/slider/MySlider";
 import { Link } from "react-router-dom";
-
-const products = [
-  {
-    id: 1,
-    title: "Xalçalar",
-    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
-    image: "/image/Xalcalar.png",
-  },
-  {
-    id: 2,
-    title: "Üzlüklər",
-    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
-    image: "/image/Uzlukler.png",
-  },
-  {
-    id: 3,
-    title: "Aksesuarlar",
-    description: "Onlarla xalça üslubunu araşdırmaq və seçmək üçün seçimlər.",
-    image: "/image/Aksesuarlar.png",
-  },
-];
+import { categories, products } from "../data/Data";
 
 const bestseller = [
   {
@@ -65,38 +45,38 @@ const bestseller = [
     image: "/image/product5.png",
   },
 ];
-const items = [
-  {
-    id: 1,
-    title: "Ofis",
-    image: "/image/ofis.png", // Replace with actual image paths
-  },
-  {
-    id: 2,
-    title: "Mətbəx",
-    image: "/image/metbex.png",
-  },
-  {
-    id: 3,
-    title: "Outdoor",
-    image: "/image/outdoor.png",
-  },
-  {
-    id: 4,
-    title: "Chesterfield",
-    image: "/image/chesterfield.png",
-  },
-  {
-    id: 5,
-    title: "Vintage",
-    image: "/image/vintage.png",
-  },
-  {
-    id: 6,
-    title: "Loundry room",
-    image: "/image/metbex.png",
-  },
-];
+// const items = [
+//   {
+//     id: 1,
+//     title: "Ofis",
+//     image: "/image/ofis.png", // Replace with actual image paths
+//   },
+//   {
+//     id: 2,
+//     title: "Mətbəx",
+//     image: "/image/metbex.png",
+//   },
+//   {
+//     id: 3,
+//     title: "Outdoor",
+//     image: "/image/outdoor.png",
+//   },
+//   {
+//     id: 4,
+//     title: "Chesterfield",
+//     image: "/image/chesterfield.png",
+//   },
+//   {
+//     id: 5,
+//     title: "Vintage",
+//     image: "/image/vintage.png",
+//   },
+//   {
+//     id: 6,
+//     title: "Loundry room",
+//     image: "/image/metbex.png",
+//   },
+// ];
 
 const testimonials = [
   {
@@ -123,22 +103,24 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
   };
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + items.length) % items.length
+      (prevIndex) => (prevIndex - 1 + products.length) % products.length
     );
   };
 
   // Create a slice of the items array starting from the currentIndex
-  const visibleItems = items
+  const visibleItems = categories
     .slice(currentIndex, currentIndex + 5)
-    .concat(items.slice(0, Math.max(0, currentIndex + 5 - items.length)));
-  const bestsellerItems = bestseller
+    .concat(
+      categories.slice(0, Math.max(0, currentIndex + 5 - categories.length))
+    );
+  const bestsellerItems = products
     .slice(currentIndex, currentIndex + 5)
-    .concat(bestseller.slice(0, Math.max(0, currentIndex + 5 - items.length)));
+    .concat(products.slice(0, Math.max(0, currentIndex + 5 - products.length)));
 
   return (
     // Hero Section
@@ -156,9 +138,9 @@ const Home = () => {
               <h2
                 style={{
                   color: "#141414",
-                  fontSize: 40,
                   fontWeight: "700",
                   wordWrap: "break-word",
+                  // fontFamily:'Space Grotesk'
                 }}
                 className="display-5"
               >
@@ -167,7 +149,6 @@ const Home = () => {
               <p
                 style={{
                   color: "#7F7F7F",
-                  fontSize: "18px",
                   fontWeight: "700",
                   wordBreak: "break-word",
                 }}
@@ -180,18 +161,29 @@ const Home = () => {
           </Row>
 
           <Row>
-            {products.map((product, index) => (
+            {categories.slice(3, 6).map((product, index) => (
               <Col key={index} xs={12} md={4} className="mb-4">
-                <Card className="border-0 text-white">
-                  <Card.Img
-                    style={{ filter: "brightness(80%)" }}
-                    src={product.image}
-                    alt={product.title}
-                  />
-                  <Card.ImgOverlay className="d-flex flex-column justify-content-end">
-                    <Card.Title className="fw-bold">{product.title}</Card.Title>
-                    <Card.Text>{product.description}</Card.Text>
-                  </Card.ImgOverlay>
+                <Card
+                  style={{ cursor: "pointer" }}
+                  className="border-0 text-white"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/products/category/${product.name}`}
+                  >
+                    <Card.Img
+                      style={{ filter: "brightness(80%)" }}
+                      src={product.image}
+                      alt={product.name}
+                    />
+
+                    <Card.ImgOverlay className="d-flex flex-column justify-content-end">
+                      <Card.Title className="fw-bold">
+                        {product.name}
+                      </Card.Title>
+                      <Card.Text>{product.description}</Card.Text>
+                    </Card.ImgOverlay>
+                  </Link>
                 </Card>
               </Col>
             ))}
@@ -201,7 +193,7 @@ const Home = () => {
       {/* En Cox Satilan  */}
 
       <section
-        style={{ background: "#f8f9fa;" }}
+        style={{ background: "#f8f9fa" }}
         className="product-section py-5"
       >
         <Container>
@@ -220,30 +212,30 @@ const Home = () => {
             <div className="carousel-container">
               {/* xs={12} sm={6} md={4} lg={2} className="mb-4 custom-col" */}
               <div className="carousel">
-                {bestsellerItems.map((bestsell) => (
+                {bestsellerItems.slice(0, 5).map((bestsell) => (
                   <div key={bestsell.id} className="karousel-item">
                     <img
                       className="carousel-item-img"
                       variant="top"
-                      src={bestsell.image}
-                      alt={bestsell.title}
+                      src={bestsell.defaultImage}
+                      alt={bestsell.name}
                     />
                     <div className="d-flex flex-column">
                       <div
                         style={{
-                          fontFamily: "Space Gortesk",
+                          fontFamily: "Space Grotesk",
                           fontWeight: "400",
                           fontSize: "16px",
                         }}
                         className="carousel-item-caption"
                       >
-                        {bestsell.title}
+                        {bestsell.name}
                       </div>
                       <div
                         style={{
                           color: "#E6AA04",
                           textAlign: "center",
-                          fontFamily: "Space Gortesk",
+                          fontFamily: "Space Grotesk",
                           wordWrap: "break-word",
                         }}
                         className="mt-auto  fw-bold"
@@ -276,19 +268,20 @@ const Home = () => {
           <p className="text-white lead">
             Evinizi ifadə etmək üçün 300-dən çox yol alın.
           </p>
-          <Button
-            className="cta-btn"
-            variant="light"
-            size="lg"
-            style={{
-              borderRadius: "30px",
-              padding: "10px 30px",
-              fontSize: "18px",
-              background: "white",
-            }}
-          >
-            <Link to="/"> DAHA ÇOX</Link>
-          </Button>
+          <Link to="/" style={{color:'inherit'}}>
+            <Button
+              className="cta-btn"
+              variant="light"
+              size="lg"
+              style={{
+                borderRadius: "30px",
+                fontSize: "18px",
+                background: "white",
+              }}
+            >
+              DAHA Çox
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -310,9 +303,9 @@ const Home = () => {
                     <img
                       className="carousel-item-img"
                       src={item.image}
-                      alt={item.title}
+                      alt={item.name}
                     />
-                    <div className="carousel-item-caption">{item.title}</div>
+                    <div className="carousel-item-caption">{item.name}</div>
                   </div>
                 ))}
               </div>
@@ -334,18 +327,20 @@ const Home = () => {
           <p className="text-white">
             Evinizi ifadə etmək üçün 300-dən çox yol alın.
           </p>
-          <Button
-            className="cta-btn"
-            variant="primary"
-            size="lg"
-            style={{
-              borderRadius: "30px",
-              padding: "10px 30px",
-              fontSize: "18px",
-            }}
-          >
-            <Link to="/">DAHA ÇOX</Link>
-          </Button>
+          <Link to="/contact" style={{ color: "inherit" }}>
+            <Button
+              className="cta-btn"
+              variant="primary"
+              size="lg"
+              style={{
+                borderRadius: "30px",
+                fontSize: "18px",
+                background: "white",
+              }}
+            >
+              DAHA Çox
+            </Button>
+          </Link>
         </div>
       </div>
 

@@ -64,7 +64,7 @@ const ProductDetails = ({ product, selectedColor }) => {
 
       <div className="product-colors">
         <h5>Məhsulun Rəngi</h5>
-        <ul className="color-options">
+        <ul className="color-options2" style={{listStyle:'none'}}>
           {product.colors.map((color, index) => (
             <li key={index}>
               <button

@@ -1,101 +1,111 @@
-
-
-.section1 h2{
-  font-family: 'Space Gortesk';
-
+/* header */
+.form-control:focus {
+  outline: none; /* Remove the default focus outline */
+  box-shadow: none; /* Remove the default focus box-shadow (if any) */
 }
-.section1 p{
-  font-family: 'Space Gortesk';
 
+.form-control:focus-visible {
+  outline: 2px solid #ffbb00; /* Custom outline when focused */
+  outline-offset: 2px;
 }
-.section1 .card-title{
-  font-family: 'Space Gortesk';
+
+/* header */
+.section1 h2 {
+  /* font-family: "Space Grotesk"; */
+  font-size: 40px;
+}
+.section1 p {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+}
+/* .section1 .card-title {
+  font-family: "Space Grotesk";
   font-weight: 500;
-
-}
-
+} */
 
 /* Product Section  */
 
 .product-section {
-    background-color: #f8f9fa;
-  }
-  
- 
-  
-  .product-section h2 {
-    color: black;
-    font-size: 40px;
-    font-family: 'Space Grotesk';
-    font-weight: 700;
-    word-wrap: 'break-word';
-  }
-  
-  .product-section p {
-    font-size: 18px;
-    color: #7F7F7F;
-    font-weight: 400;
+  background-color: #f8f9fa;
+}
 
-    font-family: 'Space Gortesk';
+.product-section h2 {
+  color: black;
+  font-size: 40px;
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  word-wrap: "break-word";
+}
 
-  }
+.product-section p {
+  font-size: 18px;
+  color: #7f7f7f;
+  font-weight: 400;
+
+  font-family: "Space Grotesk";
+}
 
 /* section 4 */
-  .section-4 {
-    position: relative;
-    background-image: url('/public/image/kanpaniyalBackground.png'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    height: 70vh; /* Adjust height */
-    width: 100%;
-    color: #fff;
-    overflow: hidden;
-  }
-  
-  .section4-content {
-    z-index: 2;
-  }
-  .section-4 h1{
-    font-family: 'Space Gortesk';
-  }
-  
-  .cta-btn {
-    background-color: white;  
-    color: #000;
-    border: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-btn:hover {
-    background-color: #ff6f61;
-  }
-  
-  .hero-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: 1;
-  }
+.section-4 {
+  position: relative;
+  background-image: url("/public/image/kanpaniyalBackground.png"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 70vh; /* Adjust height */
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.section4-content {
+  z-index: 2;
+}
+.section-4 .section4-content h1 {
+  font-family: "Space Grotesk";
+  font-weight: 700;
+}
+
+.section-4 .section4-content p {
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.section-4 button {
+  font-family: "Mulish";
+  color: #2e2e2e;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  text-decoration: none;
+  padding: 10px 3 0px;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
 /* Category section  */
 /* Category Section Styles */
- .category-section h2{
- font-family: 'Space Gortesk';
- font-size: 40px;
- color: #141414;
- font-weight: 700;
- }
+.category-section h2 {
+  font-family: "Space Grotesk";
+  font-size: 40px;
+  color: #141414;
+  font-weight: 700;
+}
 
- .category-section p{
-   color: #7F7F7F;
- font-size: 18px;
- font-family: 'Space Grotesk';
- font-weight: 400;
- word-wrap: break-word;
- }
+.category-section p {
+  color: #7f7f7f;
+  font-size: 18px;
+  font-family: "Space Grotesk";
+  font-weight: 400;
+  word-wrap: break-word;
+}
 
 .carousel-wrapper {
   position: relative;
@@ -122,14 +132,14 @@
   padding: 10px;
 }
 
-.carousel-item-img{
+.carousel-item-img {
   width: 100%;
 }
 
 .carousel-item-caption {
   text-align: center;
   margin-top: 10px;
-  font-family: 'Space Gortesk';
+  font-family: "Space Grotesk";
 }
 
 .carousel-btn {
@@ -146,7 +156,7 @@
 }
 
 .left-btn {
-  left:-30px;
+  left: -30px;
 }
 
 .right-btn {
@@ -157,111 +167,93 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-
-  
 /* About section */
-  .about-section {
-    position: relative;
-    background-image: url('/public/image/AboutSection.png'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    height: 400px; /* Adjust the height as per your need */
-    width: 100%;
-    color: #fff;
-    overflow: hidden;
-  }
- 
-  
-  .about-content {
-    z-index: 2;
-    position: relative;
-  }
-  .about-content h2,p{
-    font-family: 'Space Gortesk';
-  }
-  .about-content h2{
-    font-size: 48px;
-  }
-  .about-content p{
-    font-size: 20px;
-  }
-/*   
-  .cta-btn {
-    border: none;
-    transition: background-color 0.3s ease;
-  
-  }
- 
-  .cta-btn:hover {
-    background-color: #ff6f61;
-    color: white;
-  } */
-  .cta-btn a{
-    color: #000;
-    text-decoration: none;
-    /* font-family: 'Mulish',sans-serif; */
-  }
+.about-section {
+  position: relative;
+  background-image: url("/public/image/AboutSection.png"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust the height as per your need */
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-content {
+  z-index: 2;
+  position: relative;
+}
+.about-content h2,
+p {
+  font-family: "Space Grotesk";
+}
+.about-content h2 {
+  font-size: 48px;
+}
+.about-content p {
+  font-size: 20px;
+}
+.about-content button {
+  padding: 10px 30px;
+  font-family: "Mulish";
+  color: #2e2e2e;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
 /* Customer staisfaction */
-
-
 
 .customer-satisfaction .card img {
   object-fit: cover;
 }
-.customer-satisfaction h2{
-  color: '#141414';
-font-size: 40px;
-font-family: 'Space Grotesk';
-font-weight: 700;
-word-wrap: break-word;
+.customer-satisfaction h2 {
+  color: #141414;
+  font-size: 40px;
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  word-wrap: break-word;
 }
-.customer-satisfaction p{
-  color: #7F7F7F;
-font-size: 18;
-font-family: 'Space Grotesk';
-font-weight: 400;
-word-wrap: break-word
+.customer-satisfaction p {
+  color: #7f7f7f;
+  font-size: 18;
+  font-family: "Space Grotesk";
+  font-weight: 400;
+  word-wrap: break-word;
 }
 .customer-satisfaction .card-title {
   color: black;
   font-size: 18px;
-  font-family: 'Space Grotesk';
+  font-family: "Space Grotesk";
   font-weight: 400;
-  word-wrap: break-word ;
+  word-wrap: break-word;
 }
 
 .customer-satisfaction .card-text {
-  color: #7F7F7F;
-  font-family: 'Mulish';
-  font-style: 'italic';
+  color: #7f7f7f;
+  font-family: "Mulish";
+  font-style: "italic";
   font-weight: 400;
   font-size: 14px;
   word-wrap: break-word;
   font-style: italic;
-  
 }
 
-
-
-
-
-
-
-  @media (min-width: 992px) {
-    .custom-col {
-      flex: 0 0 19%;  /* Roughly 5 columns */
-      max-width: 19%;
-    }
+@media (min-width: 992px) {
+  .custom-col {
+    flex: 0 0 19%; /* Roughly 5 columns */
+    max-width: 19%;
   }
-  
-  @media (max-width: 768px) {
-    .custom-col {
-      margin-bottom: 20px;  /* Adds spacing for mobile */
-    }
-  }
+}
 
+@media (max-width: 768px) {
+  .custom-col {
+    margin-bottom: 20px; /* Adds spacing for mobile */
+  }
+}
 
 /* Category section */
 /* RESPONSIVENESS */
@@ -291,9 +283,95 @@ word-wrap: break-word
   /* Move buttons inside the container for better UX on small screens */
   .left-btn {
     left: 10px;
-
   }
-  .right-btn{
+  .right-btn {
     right: 10px;
+  }
+}
+/* Header.css */
+
+/* Hide Xüsusi Təkliflər and Məhsullar on mobile (less than 768px wide) */
+.desktop-links {
+  display: none;
+}
+.desktop-links .links {
+  gap: 40px;
+}
+/* Custom media queries to adjust for different screen sizes */
+/* Categories Flex Adjustment for 768px - 1024px */
+.mobileMenu .menuList ul li {
+  border: 1px black solid;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .controls {
+    max-width: none;
+  }
+  #navbarNav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Ensure there's a gap between items */
+    padding: 0;
+  }
+  #navbarNav ul li {
+    flex: 1 0 12%; /* Allows shrinking but prevents overflow */
+    text-align: center;
+  }
+  .desktop-links .links {
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1025px) {
+  #navbarNav ul {
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .section1 h2 {
+    font-size: 30px;
+  }
+  .section1 p {
+    font-size: 18px;
+  }
+  .product-section h2 {
+    font-size: 30px;
+  }
+  .product-section p {
+    font-size: 18px;
+  }
+  .section-4 h1 {
+    font-size: 30px;
+  }
+  .section-4 p {
+    font-size: 18px;
+  }
+  .section-4 button {
+    padding: 13px 35px;
+  }
+  .category-section h2 {
+    font-size: 30px;
+  }
+  .category-section p {
+    font-size: 18px;
+  }
+  .about-content h2 {
+    font-size: 30px;
+  }
+  .about-content p {
+    font-size: 18px;
+  }
+  .about-content button {
+    padding: 8px 25px;
+  }
+  .customer-satisfaction h2 {
+    font-size: 30px;
+  }
+  .customer-satisfaction p {
+    font-size: 18px;
+  }
+  .controls {
+    max-width: none;
   }
 }

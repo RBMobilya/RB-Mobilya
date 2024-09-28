@@ -7,18 +7,22 @@ const Product = ({ product }) => {
 
  
  
-  const handleColorChange = (image,index) => {
-    setSelectedImage(image);
+  const handleColorChange = (images, index) => {
+    if (images && images.length > 0) {
+      setSelectedImage(images[0]); // Use the first image of the selected color
+    } else {
+      setSelectedImage(product.defaultImage); // Fallback to the default image if no images are available
+    }
     setSelectedColor(index);
   };
 
   return (
-    <div className="product-card h-100">
+    <div className="product-card ">
     <Link to={`/product/${product.id}`}>
-    <img style={{background:' linear-gradient(0deg, white 0%, white 100%)',width:'100%'}} src={selectedImage} alt={product.name} />
+    <img style={{background:' linear-gradient(0deg, white 0%, white 100%)'}} src={selectedImage} alt={product.name} />
     </Link>
       <div className="card-body text-center">
-      <h5>{product.name}</h5>
+      <h5 >{product.name}</h5>
       <p>{product.price} ₼</p>
       <div className="colors">
         {product.colors.map((color,index) => (
@@ -27,7 +31,7 @@ const Product = ({ product }) => {
           className={`color-circle ${index === selectedColor ? 'active' : ''}`}
             key={color.name}
             style={{ backgroundColor: color.code }}
-            onClick={() => handleColorChange(color.image,index)}
+            onClick={() => handleColorChange(color.images,index)}
           ></button>
         ))}
       </div>
