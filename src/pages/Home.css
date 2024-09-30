@@ -8,6 +8,16 @@
   outline: 2px solid #ffbb00; /* Custom outline when focused */
   outline-offset: 2px;
 }
+.header {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;  /* Set your preferred background color */
+}
+
+
+
+
 
 /* header */
 .section1 h2 {
@@ -302,7 +312,11 @@ p {
 .mobileMenu .menuList ul li {
   border: 1px black solid;
 }
-
+@media (min-width:992px) and (max-width:1024px){
+  #navbarNav{
+    display: none;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .controls {
     max-width: none;

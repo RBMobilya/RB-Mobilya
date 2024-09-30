@@ -1,5 +1,4 @@
 .hero-section h1 {
-  font-family: "Space Grotesk";
   font-size: 48px;
   font-weight: 700;
   word-wrap: "break-word";
@@ -13,7 +12,7 @@
 }
 
 .hero-section button  {
-  font-family: "Mulish";
+  font-family: "Space Grotesk";
   color: #2e2e2e;
   font-size: 20px;
   font-weight: 600;

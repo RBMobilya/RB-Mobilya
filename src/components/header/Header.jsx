@@ -16,6 +16,7 @@ const Header = ({ onSearch }) => {
   const [filteredSuggestions, setFilteredSuggestions] = useState([]); // Store filtered suggestions
   const [isFocused, setIsFocused] = useState(false);
   const menuRef = useRef(null); // Reference to the mobile menu
+  
   // Load suggestions on mount
   useEffect(() => {
     const allSuggestions = [
@@ -85,7 +86,7 @@ const Header = ({ onSearch }) => {
     };
   }, [isMenuOpen]);
   return (
-    <header className="header  bg-light " style={{ position: "realtive" }}>
+    <header className={`header`} >
       <div
         style={{
           width: "100%",
@@ -227,6 +228,7 @@ const Header = ({ onSearch }) => {
                   maxWidth: "600px",
                   borderRadius: "50px",
                   overflow: "hidden",
+                  outlineStyle:'hidden'
                 }}
               >
                 <Form.Control
@@ -287,7 +289,7 @@ const Header = ({ onSearch }) => {
         </Row>
       </Container>
       <div
-        className="collapse navbar-collapse  d-md-block d-md-flex container "
+        className="collapse navbar-collapse  d-xl-block d-xl-flex container "
         id="navbarNav"
       >
         <ul

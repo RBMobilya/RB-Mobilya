@@ -27,7 +27,7 @@
   color: #141414;
   font-size: 16;
   font-weight: 400;
-  font-family: "Space Grostesk";
+  font-family: "Space Grotesk";
 }
 
 .filter-group ul {
@@ -262,13 +262,68 @@
   font-size: 20px;
   color: #444;
 }
+.filter-modal-close {
+  display: none;
+ 
+}
+/* Filter Header and Arrow */
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.filter-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.toggle-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-arrow.up {
+  transform: rotate(180deg); /* Rotate the arrow up */
+}
+
+/* Filter Content Sliding Behavior */
+.filter-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.filter-content.open {
+  max-height: 400px; /* Adjust based on content size */
+}
+
+.filter-content.collapsed {
+  max-height: 0;
+}
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+
+/* Responsive behavior: Apply toggle only on mobile */
+@media (min-width: 992px) {
+  .filter-content {
+    max-height: none;
+    overflow: visible;
+    transition: none;
+  }
+
+  .toggle-arrow {
+    display: none; /* No arrow in desktop view */
+  }
+}
+
+@media (max-width: 992px) {
   /* Sidebar takes full width on smaller screens */
   .filter-sidebar {
     width: 100%;
-    margin-bottom: 20px;
   }
 
   /* Stack the layout vertically on smaller screens */
@@ -277,19 +332,89 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .filters {
     display: none;
+  }
+  .filter-modal-close {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+    align-items: center;
   }
   .products-grid {
     width: 100%;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width:992px) and (max-width:1024px) {
+  .all-products-page {
+    flex-direction: row;
+  }
+}
+
+
+/* Mobile: Filters hidden initially, shown on button click */
+@media (max-width: 991px) {
+  .filter-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%; /* Ensure it takes full height */
+    width: 100%; /* Ensure it takes full width */
+    background-color: white;
+    z-index: 1000;
+    transform: translateY(100%); /* Hidden by default */
+    transition: transform 0.4s ease-in-out;
+    padding: 20px;
+    overflow-y: auto; /* Allow scrolling if the filter content exceeds screen height */
+  }
+
+  .filter-sidebar.visible {
+    transform: translateY(0); /* Slide up to show */
+  }
+
+  .btn-filter {
+    display: block;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  /* Overlay to darken the background */
+  .filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+
+  .filter-overlay.visible {
+    display: block; /* Show overlay when modal is visible */
+  }
+}
+/* @media (max-width: 991px) {
   .filters {
     display: none;
   }
-  .products-grid {
-    width: 100%;
+} */
+
+@media (min-width: 992px) {
+  .filters {
+    display: block;
+  }
+  .apply-filter{
+    display: none;
   }
 }
+/* Always open filter content on desktop (non-mobile) */
+@media (min-width: 993px) {
+  .filter-content {
+    max-height: none !important;
+    display: block !important;
+  }
+}
+
