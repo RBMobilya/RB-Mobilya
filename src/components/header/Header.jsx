@@ -139,9 +139,9 @@ const Header = ({ onSearch }) => {
       </div>
 
       <Container className="py-3 controls">
-        <Row className="align-items-center justify-content-between d-flex">
+      <Row className="align-items-center justify-content-between d-flex">
           {/* Logo Section */}
-          <Col md={3} sm={2} xs={2}>
+          <Col md={2} sm={2} xs={2}>
             <a href="#" className="navbar-brand">
               <Link to="/">
                 <img
@@ -153,7 +153,7 @@ const Header = ({ onSearch }) => {
             </a>
           </Col>
           {/* təklifler məhsullar əlaqə */}
-          <Col md={6} sm={3} className="d-none d-md-block  desktop-links">
+          <Col md={6} sm={3} className="d-none d-lg-block  desktop-links">
             <div
               className="links"
               style={{
@@ -216,7 +216,7 @@ const Header = ({ onSearch }) => {
             </div>
           </Col>
           {/* Search Bar Section */}
-          <Col md={3} sm={9} xs={8}>
+          <Col md={9} lg={3} sm={9} xs={8}>
             <Form
               onSubmit={handleSearch}
               className="d-flex justify-content-center"
@@ -275,7 +275,7 @@ const Header = ({ onSearch }) => {
             </Form>
           </Col>
           {/* Hamburger Menu Toggle Icon for Mobile */}
-          <Col xs={2} sm={1} className="d-md-none">
+          <Col xs={2} md={1} sm={1} className="d-lg-none">
             <button
               className="menu-toggle-btn"
               onClick={toggleMenu}
@@ -289,7 +289,7 @@ const Header = ({ onSearch }) => {
         </Row>
       </Container>
       <div
-        className="collapse navbar-collapse  d-xl-block d-xl-flex container "
+        className="collapse navbar-collapse  d-xl-flex container "
         id="navbarNav"
       >
         <ul
@@ -327,7 +327,7 @@ const Header = ({ onSearch }) => {
       </div>
       {/* Mobile Menu (Overlay or Slide Menu) */}
       {isMenuOpen && (
-        <div ref={menuRef} className="mobileMenu" style={styles.mobileMenu}>
+        <div ref={menuRef} className={`mobileMenu ${isMenuOpen ? "menu-slide-in" : "menu-slide-out"}`}>
           <div className="logoContainer p-3" style={styles.logoContainer}>
             <img src="/image/logo.png" alt="Logo" style={styles.logo} />
           </div>
@@ -415,17 +415,7 @@ const Header = ({ onSearch }) => {
   );
 };
 const styles = {
-  mobileMenu: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "70%",
-    height: "100%",
-    backgroundColor: "#fff",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-    zIndex: 1000,
-    padding: "2 0px",
-  },
+
   logoContainer: {
     textAlign: "left",
     marginBottom: "20px",

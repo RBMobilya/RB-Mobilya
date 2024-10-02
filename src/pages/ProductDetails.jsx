@@ -4,7 +4,7 @@ import { Button, Form, Badge, Row, Col } from "react-bootstrap";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import StoreIcon from "@mui/icons-material/Store";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const ProductDetails = ({ product, selectedColor }) => {
   const [currentColor, setCurrentColor] = useState(
     selectedColor || product.colors[0]
@@ -36,9 +36,9 @@ const ProductDetails = ({ product, selectedColor }) => {
   return (
     <div>
       <h2>{product.name}</h2>
-      <p>
+      <div>
         {product.discountedPrice ? (
-          <div>
+          <>
             <span
               style={{
                 textDecoration: "line-through",
@@ -51,13 +51,13 @@ const ProductDetails = ({ product, selectedColor }) => {
             <span style={{ color: "orange", fontWeight: "bold" }}>
               ${product.discountedPrice}
             </span>
-          </div>
+          </>
         ) : (
           <div>
             <span>${product.price}</span>
           </div>
         )}
-      </p>
+      </div>
       <p style={{ fontFamily: "Inter", color: "#7F7F7F" }}>
         {product.description}
       </p>
@@ -81,7 +81,7 @@ const ProductDetails = ({ product, selectedColor }) => {
 
       <Row className="delivery-stock-warranty-section my-3">
         {/* Delivery */}
-        <Col xs={12} md={4} className="text-center">
+        <Col xs={4} md={4} className="text-center">
           <div className="delivery-info">
             <div className="icon-container">
               <LocalShippingIcon style={{ fontSize: "56px", color: "#888" }} />
@@ -94,7 +94,7 @@ const ProductDetails = ({ product, selectedColor }) => {
         </Col>
 
         {/* Stock */}
-        <Col xs={12} md={4} className="text-center">
+        <Col xs={4} md={4} className="text-center">
           <div className="stock-info">
             <div className="icon-container">
               <StoreIcon style={{ fontSize: "56px", color: "#888" }} />
@@ -107,7 +107,7 @@ const ProductDetails = ({ product, selectedColor }) => {
         </Col>
 
         {/* Warranty */}
-        <Col xs={12} md={4} className="text-center">
+        <Col xs={4} md={4} className="text-center">
           <div className="warranty-info">
             <div className="icon-container">
               <VerifiedIcon style={{ fontSize: "56px", color: "#888" }} />

@@ -27,11 +27,11 @@ console.log(`product: ${product.defaultImage}`);
   return (
     <Container>
       <Row>
-        <Col md={7}>
+        <Col lg={7} className='imageGallery'>
           {/* Image Gallery */}
           <ImageGallery defaultImage={defaultImageToShow} images={imagesToShow}  />
         </Col>
-        <Col md={5}>
+        <Col lg={5}>
           {/* Product Details */}
           <ProductDetails product={product} selectedColor={selectedColor} 
              />

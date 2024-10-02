@@ -2,8 +2,19 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa';
 import './Footer.css'; // Custom CSS for styling
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const sendToWhatsApp = () => {
+    const message = `
+      heyoooo
+    `;
+    const encodedMessage = encodeURIComponent(message); // URL-də düzgün şəkildə göstərilməsi üçün mesajı kodlayırıq
+    const phoneNumber = "+48 573 441 958"; // Telefon nömrənizi bura əlavə edin
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+    window.open(whatsappUrl, "_blank"); // WhatsApp linkini yeni tabda açır
+  };
   return (
 
     <>
@@ -14,19 +25,22 @@ const Footer = () => {
         <Row>
           {/* Logo Section */}
           <Col xs={12} md={3} className="mb-4">
-            <img src="/image/Footer-logo.png" alt="Logo" className="footer-logo mb-3" /> {/* Replace with your logo */}
+          <Link to='/'>
+          <img src="/image/Footer-logo.png" alt="Logo" className="footer-logo mb-3" /> {/* Replace with your logo */}
+
+          </Link>
           </Col>
 
           {/* Company Information */}
           <Col xs={12} md={3} className="mb-4">
             <h5 className="text-warning">Şirkət</h5>
             <ul className="list-unstyled">
-              <li><a href="#">Haqqımızda</a></li>
-              <li><a href="#">Müştəri xidməti</a></li>
-              <li><a href="#">Vakansiyalar</a></li>
-              <li><a href="#">Zəmanət</a></li>
-              <li><a href="#">Missiya</a></li>
-              <li><a href="#">Xəbərlər</a></li>
+              <li><Link to='/contact'>Haqqımızda</Link></li>
+              <li><Link to='/'>Müştəri xidməti</Link></li>
+              <li><Link to='/'>Vakansiyalar</Link></li>
+              <li><Link to='/'>Zəmanət</Link></li>
+              <li><Link to='/'>Missiya</Link></li>
+              <li><Link to='/'>Xəbərlər</Link></li>
             </ul>
           </Col>
 
@@ -34,12 +48,12 @@ const Footer = () => {
           <Col xs={12} md={3} className="mb-4">
             <h5 className="text-warning">İnformasiyaya</h5>
             <ul className="list-unstyled">
-              <li><a href="#">İstifadəçi razılaşması</a></li>
-              <li><a href="#">Konfidensiallıq</a></li>
-              <li><a href="#">Kredit və geri qaytarma şərtləri</a></li>
-              <li><a href="#">Oflayn alış qaydaları</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Bloq</a></li>
+              <li><Link to='/'>İstifadəçi razılaşması</Link></li>
+              <li><Link to='/'>Konfidensiallıq</Link></li>
+              <li><Link to='/'>Kredit və geri qaytarma şərtləri</Link></li>
+              <li><Link to='/'>Oflayn alış qaydaları</Link></li>
+              <li><Link to='/'>FAQ</Link></li>
+              <li><Link to='/'>Bloq</Link></li>
             </ul>
           </Col>
 
@@ -52,9 +66,9 @@ const Footer = () => {
             </ul>
             <h5 className="text-warning">Sosial Medya</h5>
             <div className="social-icons">
-              <a href="#"><FaWhatsapp className="text-light mx-2" size={24} /></a>
-              <a href="#"><FaInstagram className="text-light mx-2" size={24} /></a>
-              <a href="#"><FaFacebook className="text-light mx-2" size={24} /></a>
+              <p onClick={sendToWhatsApp} ><FaWhatsapp className="text-light mx-2" size={24} /></p>
+              <p><FaInstagram className="text-light mx-2" size={24} /></p>
+              <p><FaFacebook className="text-light mx-2" size={24} /></p>
             </div>
           </Col>
           {/* <Col xs={12} md={3} className="mb-4">

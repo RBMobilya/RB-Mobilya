@@ -6,45 +6,12 @@ import "./Home.css";
 import MySlider from "../components/slider/MySlider";
 import { Link } from "react-router-dom";
 import { categories, products } from "../data/Data";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/swiper-bundle.css";
+// import SwiperCore from "swiper";
+// import { Pagination } from "swiper/modules";
+// import "swiper/css/pagination";
 
-const bestseller = [
-  {
-    id: 1,
-    title: "Barcelona Oturacağı",
-    price: "250 ₼",
-    image: "/image/product1.png", // replace with actual image paths
-  },
-  {
-    id: 2,
-    title: "Jacobsen Oturacağı",
-    price: "109 ₼",
-    image: "/image/product2.png",
-  },
-  {
-    id: 3,
-    title: "Adirondack Oturacağı",
-    price: "99 ₼",
-    image: "/image/product3.png",
-  },
-  {
-    id: 4,
-    title: "Herman Miller Aeron Oturacağı",
-    price: "299 ₼",
-    image: "/image/product4.png",
-  },
-  {
-    id: 5,
-    title: "Eames Lounge Kreslosu",
-    price: "450 ₼",
-    image: "/image/product5.png",
-  },
-  {
-    id: 6,
-    title: "Eames Lounge Kreslosu",
-    price: "450 ₼",
-    image: "/image/product5.png",
-  },
-];
 // const items = [
 //   {
 //     id: 1,
@@ -162,7 +129,7 @@ const Home = () => {
 
           <Row>
             {categories.slice(3, 6).map((product, index) => (
-              <Col key={index} xs={12} md={4} className="mb-4">
+              <Col key={index} xs={12} md={6} lg={4} className="mb-4">
                 <Card
                   style={{ cursor: "pointer" }}
                   className="border-0 text-white"
@@ -210,11 +177,11 @@ const Home = () => {
 
           <div className="carousel-wrapper">
             <div className="carousel-container">
-              {/* xs={12} sm={6} md={4} lg={2} className="mb-4 custom-col" */}
               <div className="carousel">
                 {bestsellerItems.slice(0, 5).map((bestsell) => (
                   <div key={bestsell.id} className="karousel-item">
-                    <img
+                  <Link to={`/product/${bestsell.id}`} style={{textDecoration:'none' }}>
+                  <img
                       className="carousel-item-img"
                       variant="top"
                       src={bestsell.defaultImage}
@@ -225,6 +192,7 @@ const Home = () => {
                         style={{
                           fontFamily: "Space Grotesk",
                           fontWeight: "400",
+                          color:'black',  
                           fontSize: "16px",
                         }}
                         className="carousel-item-caption"
@@ -243,6 +211,8 @@ const Home = () => {
                         {bestsell.price}
                       </div>
                     </div>
+                  </Link>
+                   
                   </div>
                 ))}
               </div>
@@ -255,6 +225,50 @@ const Home = () => {
               &#10095;
             </button>
           </div>
+          {/* <Swiper
+            spaceBetween={10}
+            slidesPerView={3}
+            navigation={true} // Enable navigation arrows
+            style={{ maxWidth: "100%" }}
+          >
+            {bestsellerItems.slice(0, 5).map((bestsell, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  style={{
+                    objectFit: "cover",
+                    width: "100%", // Ensure the image takes full width
+                    height: "auto", // Adjust height based on your needs
+                  }}
+                  src={bestsell.defaultImage}
+                  alt={bestsell.name}
+                />
+                <div className="d-flex flex-column">
+                  <div
+                    style={{
+                      fontFamily: "Space Grotesk",
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      textAlign: "center", // Center the text
+                    }}
+                    className="carousel-item-caption mt-2"
+                  >
+                    {bestsell.name}
+                  </div>
+                  <div
+                    style={{
+                      color: "#E6AA04",
+                      textAlign: "center",
+                      fontFamily: "Space Grotesk",
+                      wordWrap: "break-word",
+                    }}
+                    className="mt-auto fw-bold"
+                  >
+                    {bestsell.price}
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper> */}
         </Container>
       </section>
 
@@ -268,7 +282,7 @@ const Home = () => {
           <p className="text-white lead">
             Evinizi ifadə etmək üçün 300-dən çox yol alın.
           </p>
-          <Link to="/" style={{color:'inherit'}}>
+          <Link to="/products" style={{ color: "inherit" }}>
             <Button
               className="cta-btn"
               variant="light"

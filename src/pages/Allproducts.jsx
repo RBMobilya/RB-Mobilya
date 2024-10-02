@@ -5,10 +5,11 @@ import "../pages/Products.css";
 import { Container } from "react-bootstrap";
 import { useLocation, useParams } from "react-router-dom";
 import Product from "./Product";
+import { MdFilterList } from 'react-icons/md';
 
 const Allproducts = () => {
   const [filtersVisible, setFiltersVisible] = useState(false); // State to control the visibility of the filters modal
-
+  const [visibleProducts, setVisibleProducts] = useState(12); // State to manage number of visible products
   const { categoryName } = useParams();
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
@@ -55,6 +56,11 @@ const Allproducts = () => {
     );
   });
 
+  // Function to load more products when the "Daha Cox" button is clicked
+  const loadMoreProducts = () => {
+    setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 8); // Load 8 more products
+  };
+
   // Handle filter button click to open/close filter modal (only for mobile)
   const handleFilterToggle = () => {
     setFiltersVisible(!filtersVisible);
@@ -67,15 +73,13 @@ const Allproducts = () => {
 
   return (
     <Container className="py-3">
-      <h2 style={{ fontFamily: "Space Grotesk" }}>All Products</h2>
+      <h2 className="d-none d-lg-block" style={{ fontFamily: "Space Grotesk" }}>All Products</h2>
 
       {/* Button to show filters on mobile */}
-      <button
-        className="btn btn-outline-dark d-lg-none mb-3"
-        onClick={handleFilterToggle}
-      >
-        {filtersVisible ? "Hide Filters" : "Show Filters"}
-      </button>
+      <div className="d-flex d-lg-none" style={{ justifyContent: 'space-between', alignItems: 'center' }}>
+        <h1 style={{ fontSize: '20px', display: 'flex' }}>Bütün Məhsullar <p style={{ color: "grey", fontSize: '10px' }}>({filteredProducts.length})</p></h1>
+        <MdFilterList style={{ fontSize: '28px' }} onClick={handleFilterToggle} />
+      </div>
 
       <div className="all-products-page">
         {/* Filter modal overlay for mobile */}
@@ -86,30 +90,17 @@ const Allproducts = () => {
 
         {/* Filter modal (sliding panel from bottom) */}
         <div className={`filter-sidebar ${filtersVisible ? "visible" : ""}`}>
-          <div
-              className="filter-modal-close"
-
-            // style={{
-            //   display: "flex",
-            //   justifyContent: "space-between",
-            //   margin: "24px 0",
-            // }}
-          >
-            <h1
-              style={{
-                color: "#1E1E1E",
-                fontSize: "30px",
-                fontFamily: "Space Grotesk",
-                fontWeight: "700",
-                wordWrap: "break-word",
-              }}
-            >
+          <div className="filter-modal-close">
+            <h1 style={{
+              color: "#1E1E1E",
+              fontSize: "30px",
+              fontFamily: "Space Grotesk",
+              fontWeight: "700",
+              wordWrap: "break-word",
+            }}>
               Filter
             </h1>
-            <div
-              style={{ fontSize: "36px",cursor:'pointer' }}
-              onClick={handleFilterToggle}
-            >
+            <div style={{ fontSize: "36px", cursor: "pointer" }} onClick={handleFilterToggle}>
               &times; {/* Close button */}
             </div>
           </div>
@@ -136,7 +127,7 @@ const Allproducts = () => {
         <div className="products-grid">
           {filteredProducts.length > 0 ? (
             <div className="row">
-              {filteredProducts.map((product) => (
+              {filteredProducts.slice(0, visibleProducts).map((product) => (
                 <div
                   key={product.id}
                   className="col-sm-6 col-md-4 col-lg-4 mb-4"
@@ -151,7 +142,17 @@ const Allproducts = () => {
             </div>
           )}
         </div>
+
+       
       </div>
+       {/* Load More Button */}
+       {visibleProducts < filteredProducts.length && (
+          <div className="d-flex justify-content-center mt-4">
+            <button className="btn btn-warning" onClick={loadMoreProducts}>
+              Daha Cox
+            </button>
+          </div>
+        )}
     </Container>
   );
 };

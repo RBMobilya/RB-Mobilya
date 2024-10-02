@@ -137,7 +137,7 @@
 }
 
 .karousel-item {
-  min-width: 20%; /* Each card occupies 20% of the width (5 cards) */
+  flex:0 0 20% ;/* Each card occupies 20% of the width (5 cards) */
   box-sizing: border-box;
   padding: 10px;
 }
@@ -251,14 +251,23 @@ p {
   word-wrap: break-word;
   font-style: italic;
 }
-
+@media (max-width: 992px) {
+  .searchBar{
+    margin-top: 20px !important;
+  }
+}
 @media (min-width: 992px) {
   .custom-col {
     flex: 0 0 19%; /* Roughly 5 columns */
     max-width: 19%;
+  } 
+
+}
+@media (max-width:576px){
+  .desktop-links{
+    display: none;
   }
 }
-
 @media (max-width: 768px) {
   .custom-col {
     margin-bottom: 20px; /* Adds spacing for mobile */
@@ -301,16 +310,43 @@ p {
 /* Header.css */
 
 /* Hide Xüsusi Təkliflər and Məhsullar on mobile (less than 768px wide) */
-.desktop-links {
-  display: none;
-}
+
 .desktop-links .links {
   gap: 40px;
 }
 /* Custom media queries to adjust for different screen sizes */
+/* Menu hidden initially */
+.mobileMenu {
+  position: fixed;
+    top:0;
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* Menu visible (slides in) */
+.menu-slide-in {
+  transform: translateX(0); /* Slide in when menu is open */
+}
+
+/* Menu slides out when closed */
+.menu-slide-out {
+  transform: translateX(-100%); /* Slide out when menu closes */
+}
+
 /* Categories Flex Adjustment for 768px - 1024px */
 .mobileMenu .menuList ul li {
   border: 1px black solid;
+}
+@media (max-width:1024px) {
+  #navbarNav{
+    display: none;
+  }
 }
 @media (min-width:992px) and (max-width:1024px){
   #navbarNav{
@@ -320,6 +356,10 @@ p {
 @media (min-width: 768px) and (max-width: 1024px) {
   .controls {
     max-width: none;
+  }
+  #navbarNav{
+  transition: transform 0.5s ease-in-out;
+
   }
   #navbarNav ul {
     display: flex;

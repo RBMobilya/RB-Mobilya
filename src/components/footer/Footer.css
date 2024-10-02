@@ -29,9 +29,11 @@
     color: #ffc107; /* Yellow on hover */
   }
   
-  .social-icons a {
+  .social-icons  {
     color: #f8f9fa;
     transition: color 0.3s ease;
+    display: flex;
+    justify-content: flex-start;
     
   }
   

@@ -1,3 +1,4 @@
+
 .image-thumbnails-container {
   display: flex;
   flex-direction: column;
@@ -21,6 +22,47 @@
   height: auto;
   border-radius: 5px;
 }
+.carousel-wrapper2 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.carousel-container2 {
+  display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  padding-bottom: 15px;
+  white-space: nowrap; /* Prevent items from wrapping to the next line */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel-container2::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, Opera */
+}
+
+.karousel-item2 {
+  min-width: 20%; /* Each card occupies 20% of the width */
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.karousel-item2 img {
+  width: 100%;
+  cursor: pointer;
+  -webkit-user-drag: none; /* Prevent dragging images in webkit browsers */
+  user-select: none;
+}
+
+.karousel-item2:hover {
+  transform: scale(1.05);
+}
+
+/* product details */
 .product-details {
   max-width: 100%;
   padding: 20px;
@@ -286,4 +328,9 @@
   color: #e6aa04;
   text-align: center;
   font-family: Space Grotesk;
+}
+@media (max-width:992px){
+.imageGallery{
+  margin-bottom: 26px;
+}
 }

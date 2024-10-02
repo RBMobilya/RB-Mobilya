@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { Image, Col, Row } from "react-bootstrap";
-import "./SingleProduct.css";
+import { Col, Image, Row } from "react-bootstrap";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import SwiperCore from "swiper";
+import { Pagination } from 'swiper/modules';
+import 'swiper/css/pagination';
+// Install Swiper modules
+SwiperCore.use([Pagination]);
 
-const ImageGallery = ({ images, defaultImage}) => {
+const ImageGallery = ({ images, defaultImage }) => {
   const allImages = [defaultImage, ...images];
-console.log(defaultImage)
-  // Set the selected image to the default image initially
   const [selectedImage, setSelectedImage] = useState(defaultImage);
+
   useEffect(() => {
     setSelectedImage(defaultImage);
   }, [defaultImage]);
-  console.log(images);
+
   return (
-    <div>
-      <Row>
-        <Col sm={2}>
-          {/* Display thumbnail images */}
+    <>
+     <Row className="d-none d-lg-flex">
+        <Col sm={2} className="image-thumbnails-container">
           {allImages.map((image, index) => (
             <Image
               key={index}
@@ -28,15 +32,40 @@ console.log(defaultImage)
           ))}
         </Col>
         <Col sm={9}>
-          {/* Display the selected image */}
           <Image
             src={selectedImage}
-            style={{ width: "887px", height: "560px" }}
+            style={{ width: "500px", height: "500px" }}
             fluid
           />
         </Col>
       </Row>
-    </div>
+
+      {/* for mobile */}
+      <Swiper
+      className="d-lg-none"
+        spaceBetween={10}
+        modules={[Pagination]}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        onSlideChange={(swiper) => setSelectedImage(allImages[swiper.activeIndex])}
+        style={{ maxWidth: "100%" }}
+      >
+        {allImages.map((image, index) => (
+          <SwiperSlide key={index}>
+            <img
+              src={image}
+              alt={`Product Image ${index}`}
+              style={{
+                width: "100%",
+                height: "508px",
+                borderRadius: "8px",
+                objectFit: "cover",
+              }}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
   );
 };
 

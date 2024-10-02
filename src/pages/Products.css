@@ -4,7 +4,6 @@
   padding: 20px;
 }
 .filters {
-  width: 25%;
   padding-right: 20px;
 }
 /* .filter-sidebar {
@@ -12,7 +11,7 @@
 
 /* Remove the grid display properties from here */
 .products-grid {
-  width: 75%; /* Product grid takes 75% of the page width */
+  width: 100%;
   padding-left: 20px;
   /* No need for display: grid, Bootstrap will handle this */
 }

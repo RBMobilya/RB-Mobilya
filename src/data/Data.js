@@ -105,7 +105,7 @@ export const products = [
           "/image/divan3_white.png",
           "/image/divan4_white.png",
         ],
-        defaultColorImage:'/image/AboutSection.png'
+        defaultColorImage:'/image/metbex.png'
 
       },
       {
@@ -128,6 +128,7 @@ export const products = [
     delivery: "1-2 gün", // Delivery time
     stock: "bəli",
   },
+  
   {
     id: 1,
     name: "amuntabi",
@@ -289,6 +290,224 @@ export const products = [
   },
   {
     id: 7,
+    name: "amuntabi",
+    category: "Oturacaq",
+    warranty: "1 illik",
+    price: 600,
+    discountedPrice: 879.2, // Discounted price
+    longDescription:
+      "Glassblower rəngarəng wabi-sabi-dən ilhamlanmış şüşə qabları ilə qüsursuz gözəlliyi əhatə edir. Unikal, qeyri-müntəzəm girintiləri və dalğaları ilə, əl işi, bənzərsiz eynəklər 5 dəstdə gəlir - Yaponiyada şanslı nömrə olduğuna inanılır - və isteğe bağlı xatir küpü (həmçinin tokkuri adlanır) ilə birləşdirilə bilər. Bu heyrətamiz dəst, xüsusən də sizin başınıza gəlsə, sevimli xatirinə həvəskarınıza xromatik hədiyyə edir. Massaçusetsdə əl işi. Bu əşyanın əl işi olduğuna görə hər biri unikaldır və fərqli olacaq. More...",
+
+    colors: [
+      { name: "Ağ", code: "#f5f5f5", image: "/image/ofis.png" },
+      { name: "Qara", code: "#d94a3f", image: "/image/metbex.png" },
+      { name: "Yaşıl", code: "#5a7f6f", image: "/image/chesterfield.png" },
+    ],
+    defaultImage: "/image/metbex.png",
+    description:
+      "This elegant sofa bed offers comfort and versatility, perfect for any modern living room.",
+    quantity: 10, // The available quantity in stock
+    delivery: "1-2 gün", // Delivery time
+    stock: "Bu həftə",
+  }, {
+    id: 8,
+    name: "amuntabi",
+    category: "Oturacaq",
+    warranty: "1 illik",
+    price: 600,
+    discountedPrice: 879.2, // Discounted price
+    longDescription:
+      "Glassblower rəngarəng wabi-sabi-dən ilhamlanmış şüşə qabları ilə qüsursuz gözəlliyi əhatə edir. Unikal, qeyri-müntəzəm girintiləri və dalğaları ilə, əl işi, bənzərsiz eynəklər 5 dəstdə gəlir - Yaponiyada şanslı nömrə olduğuna inanılır - və isteğe bağlı xatir küpü (həmçinin tokkuri adlanır) ilə birləşdirilə bilər. Bu heyrətamiz dəst, xüsusən də sizin başınıza gəlsə, sevimli xatirinə həvəskarınıza xromatik hədiyyə edir. Massaçusetsdə əl işi. Bu əşyanın əl işi olduğuna görə hər biri unikaldır və fərqli olacaq. More...",
+
+    colors: [
+      { name: "Ağ", code: "#f5f5f5", image: "/image/ofis.png" },
+      { name: "Qara", code: "#d94a3f", image: "/image/metbex.png" },
+      { name: "Yaşıl", code: "#5a7f6f", image: "/image/chesterfield.png" },
+    ],
+    defaultImage: "/image/metbex.png",
+    description:
+      "This elegant sofa bed offers comfort and versatility, perfect for any modern living room.",
+    quantity: 10, // The available quantity in stock
+    delivery: "1-2 gün", // Delivery time
+    stock: "Bu həftə",
+  }, {
+    id: 9,
+    name: "amuntabi",
+    category: "Oturacaq",
+    warranty: "1 illik",
+    price: 600,
+    discountedPrice: 879.2, // Discounted price
+    longDescription:
+      "Glassblower rəngarəng wabi-sabi-dən ilhamlanmış şüşə qabları ilə qüsursuz gözəlliyi əhatə edir. Unikal, qeyri-müntəzəm girintiləri və dalğaları ilə, əl işi, bənzərsiz eynəklər 5 dəstdə gəlir - Yaponiyada şanslı nömrə olduğuna inanılır - və isteğe bağlı xatir küpü (həmçinin tokkuri adlanır) ilə birləşdirilə bilər. Bu heyrətamiz dəst, xüsusən də sizin başınıza gəlsə, sevimli xatirinə həvəskarınıza xromatik hədiyyə edir. Massaçusetsdə əl işi. Bu əşyanın əl işi olduğuna görə hər biri unikaldır və fərqli olacaq. More...",
+
+    colors: [
+      { name: "Ağ", code: "#f5f5f5", image: "/image/ofis.png" },
+      { name: "Qara", code: "#d94a3f", image: "/image/metbex.png" },
+      { name: "Yaşıl", code: "#5a7f6f", image: "/image/chesterfield.png" },
+    ],
+    defaultImage: "/image/metbex.png",
+    description:
+      "This elegant sofa bed offers comfort and versatility, perfect for any modern living room.",
+    quantity: 10, // The available quantity in stock
+    delivery: "1-2 gün", // Delivery time
+    stock: "Bu həftə",
+  },
+  {
+    id: 10,
+    name: "amuntabi",
+    category: "Oturacaq",
+    warranty: "1 illik",
+    price: 600,
+    discountedPrice: 879.2, // Discounted price
+    longDescription:
+      "Glassblower rəngarəng wabi-sabi-dən ilhamlanmış şüşə qabları ilə qüsursuz gözəlliyi əhatə edir. Unikal, qeyri-müntəzəm girintiləri və dalğaları ilə, əl işi, bənzərsiz eynəklər 5 dəstdə gəlir - Yaponiyada şanslı nömrə olduğuna inanılır - və isteğe bağlı xatir küpü (həmçinin tokkuri adlanır) ilə birləşdirilə bilər. Bu heyrətamiz dəst, xüsusən də sizin başınıza gəlsə, sevimli xatirinə həvəskarınıza xromatik hədiyyə edir. Massaçusetsdə əl işi. Bu əşyanın əl işi olduğuna görə hər biri unikaldır və fərqli olacaq. More...",
+
+    colors: [
+      { name: "Ağ", code: "#f5f5f5", image: "/image/ofis.png" },
+      { name: "Qara", code: "#d94a3f", image: "/image/metbex.png" },
+      { name: "Yaşıl", code: "#5a7f6f", image: "/image/chesterfield.png" },
+    ],
+    defaultImage: "/image/metbex.png",
+    description:
+      "This elegant sofa bed offers comfort and versatility, perfect for any modern living room.",
+    quantity: 10, // The available quantity in stock
+    delivery: "1-2 gün", // Delivery time
+    stock: "Bu həftə",
+  },
+   {
+    id: 11,
+    name: "amuntabi",
+    category: "Oturacaq",
+    warranty: "1 illik",
+    price: 600,
+    discountedPrice: 879.2, // Discounted price
+    longDescription:
+      "Glassblower rəngarəng wabi-sabi-dən ilhamlanmış şüşə qabları ilə qüsursuz gözəlliyi əhatə edir. Unikal, qeyri-müntəzəm girintiləri və dalğaları ilə, əl işi, bənzərsiz eynəklər 5 dəstdə gəlir - Yaponiyada şanslı nömrə olduğuna inanılır - və isteğe bağlı xatir küpü (həmçinin tokkuri adlanır) ilə birləşdirilə bilər. Bu heyrətamiz dəst, xüsusən də sizin başınıza gəlsə, sevimli xatirinə həvəskarınıza xromatik hədiyyə edir. Massaçusetsdə əl işi. Bu əşyanın əl işi olduğuna görə hər biri unikaldır və fərqli olacaq. More...",
+
+    colors: [
+      { name: "Ağ", code: "#f5f5f5", image: "/image/ofis.png" },
+      { name: "Qara", code: "#d94a3f", image: "/image/metbex.png" },
+      { name: "Yaşıl", code: "#5a7f6f", image: "/image/chesterfield.png" },
+    ],
+    defaultImage: "/image/metbex.png",
+    description:
+      "This elegant sofa bed offers comfort and versatility, perfect for any modern living room.",
+    quantity: 10, // The available quantity in stock
+    delivery: "1-2 gün", // Delivery time
+    stock: "Bu həftə",
+  },
+   {
+    id: 12,
+    name: "amuntabi",
+    category: "Oturacaq",
+    warranty: "1 illik",
+    price: 600,
+    discountedPrice: 879.2, // Discounted price
+    longDescription:
+      "Glassblower rəngarəng wabi-sabi-dən ilhamlanmış şüşə qabları ilə qüsursuz gözəlliyi əhatə edir. Unikal, qeyri-müntəzəm girintiləri və dalğaları ilə, əl işi, bənzərsiz eynəklər 5 dəstdə gəlir - Yaponiyada şanslı nömrə olduğuna inanılır - və isteğe bağlı xatir küpü (həmçinin tokkuri adlanır) ilə birləşdirilə bilər. Bu heyrətamiz dəst, xüsusən də sizin başınıza gəlsə, sevimli xatirinə həvəskarınıza xromatik hədiyyə edir. Massaçusetsdə əl işi. Bu əşyanın əl işi olduğuna görə hər biri unikaldır və fərqli olacaq. More...",
+
+    colors: [
+      { name: "Ağ", code: "#f5f5f5", image: "/image/ofis.png" },
+      { name: "Qara", code: "#d94a3f", image: "/image/metbex.png" },
+      { name: "Yaşıl", code: "#5a7f6f", image: "/image/chesterfield.png" },
+    ],
+    defaultImage: "/image/metbex.png",
+    description:
+      "This elegant sofa bed offers comfort and versatility, perfect for any modern living room.",
+    quantity: 10, // The available quantity in stock
+    delivery: "1-2 gün", // Delivery time
+    stock: "Bu həftə",
+  },
+   {
+    id: 13,
+    name: "amuntabi",
+    category: "Oturacaq",
+    warranty: "1 illik",
+    price: 600,
+    discountedPrice: 879.2, // Discounted price
+    longDescription:
+      "Glassblower rəngarəng wabi-sabi-dən ilhamlanmış şüşə qabları ilə qüsursuz gözəlliyi əhatə edir. Unikal, qeyri-müntəzəm girintiləri və dalğaları ilə, əl işi, bənzərsiz eynəklər 5 dəstdə gəlir - Yaponiyada şanslı nömrə olduğuna inanılır - və isteğe bağlı xatir küpü (həmçinin tokkuri adlanır) ilə birləşdirilə bilər. Bu heyrətamiz dəst, xüsusən də sizin başınıza gəlsə, sevimli xatirinə həvəskarınıza xromatik hədiyyə edir. Massaçusetsdə əl işi. Bu əşyanın əl işi olduğuna görə hər biri unikaldır və fərqli olacaq. More...",
+
+    colors: [
+      { name: "Ağ", code: "#f5f5f5", image: "/image/ofis.png" },
+      { name: "Qara", code: "#d94a3f", image: "/image/metbex.png" },
+      { name: "Yaşıl", code: "#5a7f6f", image: "/image/chesterfield.png" },
+    ],
+    defaultImage: "/image/metbex.png",
+    description:
+      "This elegant sofa bed offers comfort and versatility, perfect for any modern living room.",
+    quantity: 10, // The available quantity in stock
+    delivery: "1-2 gün", // Delivery time
+    stock: "Bu həftə",
+  },
+  {
+    id: 14,
+    name: "amuntabi",
+    category: "Oturacaq",
+    warranty: "1 illik",
+    price: 600,
+    discountedPrice: 879.2, // Discounted price
+    longDescription:
+      "Glassblower rəngarəng wabi-sabi-dən ilhamlanmış şüşə qabları ilə qüsursuz gözəlliyi əhatə edir. Unikal, qeyri-müntəzəm girintiləri və dalğaları ilə, əl işi, bənzərsiz eynəklər 5 dəstdə gəlir - Yaponiyada şanslı nömrə olduğuna inanılır - və isteğe bağlı xatir küpü (həmçinin tokkuri adlanır) ilə birləşdirilə bilər. Bu heyrətamiz dəst, xüsusən də sizin başınıza gəlsə, sevimli xatirinə həvəskarınıza xromatik hədiyyə edir. Massaçusetsdə əl işi. Bu əşyanın əl işi olduğuna görə hər biri unikaldır və fərqli olacaq. More...",
+
+    colors: [
+      { name: "Ağ", code: "#f5f5f5", image: "/image/ofis.png" },
+      { name: "Qara", code: "#d94a3f", image: "/image/metbex.png" },
+      { name: "Yaşıl", code: "#5a7f6f", image: "/image/chesterfield.png" },
+    ],
+    defaultImage: "/image/metbex.png",
+    description:
+      "This elegant sofa bed offers comfort and versatility, perfect for any modern living room.",
+    quantity: 10, // The available quantity in stock
+    delivery: "1-2 gün", // Delivery time
+    stock: "Bu həftə",
+  },
+  {
+    id: 15,
+    name: "amuntabi",
+    category: "Oturacaq",
+    warranty: "1 illik",
+    price: 600,
+    discountedPrice: 879.2, // Discounted price
+    longDescription:
+      "Glassblower rəngarəng wabi-sabi-dən ilhamlanmış şüşə qabları ilə qüsursuz gözəlliyi əhatə edir. Unikal, qeyri-müntəzəm girintiləri və dalğaları ilə, əl işi, bənzərsiz eynəklər 5 dəstdə gəlir - Yaponiyada şanslı nömrə olduğuna inanılır - və isteğe bağlı xatir küpü (həmçinin tokkuri adlanır) ilə birləşdirilə bilər. Bu heyrətamiz dəst, xüsusən də sizin başınıza gəlsə, sevimli xatirinə həvəskarınıza xromatik hədiyyə edir. Massaçusetsdə əl işi. Bu əşyanın əl işi olduğuna görə hər biri unikaldır və fərqli olacaq. More...",
+
+    colors: [
+      { name: "Ağ", code: "#f5f5f5", image: "/image/ofis.png" },
+      { name: "Qara", code: "#d94a3f", image: "/image/metbex.png" },
+      { name: "Yaşıl", code: "#5a7f6f", image: "/image/chesterfield.png" },
+    ],
+    defaultImage: "/image/metbex.png",
+    description:
+      "This elegant sofa bed offers comfort and versatility, perfect for any modern living room.",
+    quantity: 10, // The available quantity in stock
+    delivery: "1-2 gün", // Delivery time
+    stock: "Bu həftə",
+  },
+  {
+    id: 16,
+    name: "amuntabi",
+    category: "Oturacaq",
+    warranty: "1 illik",
+    price: 600,
+    discountedPrice: 879.2, // Discounted price
+    longDescription:
+      "Glassblower rəngarəng wabi-sabi-dən ilhamlanmış şüşə qabları ilə qüsursuz gözəlliyi əhatə edir. Unikal, qeyri-müntəzəm girintiləri və dalğaları ilə, əl işi, bənzərsiz eynəklər 5 dəstdə gəlir - Yaponiyada şanslı nömrə olduğuna inanılır - və isteğe bağlı xatir küpü (həmçinin tokkuri adlanır) ilə birləşdirilə bilər. Bu heyrətamiz dəst, xüsusən də sizin başınıza gəlsə, sevimli xatirinə həvəskarınıza xromatik hədiyyə edir. Massaçusetsdə əl işi. Bu əşyanın əl işi olduğuna görə hər biri unikaldır və fərqli olacaq. More...",
+
+    colors: [
+      { name: "Ağ", code: "#f5f5f5", image: "/image/ofis.png" },
+      { name: "Qara", code: "#d94a3f", image: "/image/metbex.png" },
+      { name: "Yaşıl", code: "#5a7f6f", image: "/image/chesterfield.png" },
+    ],
+    defaultImage: "/image/metbex.png",
+    description:
+      "This elegant sofa bed offers comfort and versatility, perfect for any modern living room.",
+    quantity: 10, // The available quantity in stock
+    delivery: "1-2 gün", // Delivery time
+    stock: "Bu həftə",
+  },
+  {
+    id: 17,
     name: "amuntabi",
     category: "Oturacaq",
     warranty: "1 illik",
