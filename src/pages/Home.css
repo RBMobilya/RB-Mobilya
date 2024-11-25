@@ -58,7 +58,7 @@
 /* section 4 */
 .section-4 {
   position: relative;
-  background-image: url("/public/image/kanpaniyalBackground.png"); /* Replace with your image path */
+  background-image: url("../../public/image/kanpaniyalBackground.png"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   height: 70vh; /* Adjust height */
@@ -180,7 +180,7 @@
 /* About section */
 .about-section {
   position: relative;
-  background-image: url("/public/image/AboutSection.png"); /* Replace with your image path */
+  background-image: URL("../../public/image/AboutSection.png"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   height: 400px; /* Adjust the height as per your need */
