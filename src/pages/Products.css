@@ -235,6 +235,7 @@
   display: flex;
   justify-content: center;
   gap: 10px; /* Add space between the circles */
+  height: 20px!;
 }
 .color-circle {
   width: 20px;
