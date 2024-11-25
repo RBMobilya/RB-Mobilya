@@ -335,7 +335,7 @@ const Home = () => {
         </Container>
       </section>
       {/* About section  */}
-      <div className="about-section d-flex justify-content-center align-items-center" style={{backgroundImage: "url('/image/AboutSection.png')"}}>
+      <div className="about-section d-flex justify-content-center align-items-center" style={{backgroundImage: "url('/image/about-section.png')"}}>
         <div className="about-content text-center">
           <h2 className="text-white">Haqqımızda Daha Ətraflı</h2>
           <p className="text-white">
