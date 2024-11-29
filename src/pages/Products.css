@@ -244,8 +244,13 @@
   height: 20px;
   flex-shrink: 0;
   border-radius: 50%;
+   display: inline-block;
   border: 2px white solid; /* Default no border */
   cursor: pointer;
+   -webkit-transform: none;
+  transform: none;
+  -webkit-appearance: none;
+  appearance: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -308,7 +313,12 @@
 }
 
 /* Responsive adjustments */
-
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .color-circle {
+    width: 20px;
+    height: 20px;
+  }
+}
 /* Responsive behavior: Apply toggle only on mobile */
 @media (min-width: 992px) {
   .filter-content {
