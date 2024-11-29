@@ -215,7 +215,7 @@
 
 .product-card img {
   width: 100%;
-  height: auto;
+  height: 200px;
   margin-bottom: 15px;
 }
 
@@ -233,13 +233,16 @@
 }
 .product-card .colors {
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   gap: 10px; /* Add space between the circles */
   margin-top: 10px;
+  height: 20px!;
 }
 .color-circle {
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
   border-radius: 50%;
   border: 2px white solid; /* Default no border */
   cursor: pointer;
@@ -408,6 +411,7 @@
   .apply-filter{
     display: none;
   }
+ 
 }
 /* Always open filter content on desktop (non-mobile) */
 @media (min-width: 993px) {
