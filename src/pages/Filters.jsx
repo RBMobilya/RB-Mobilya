@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Products.css";
+import { Link } from "react-router-dom";
 
 const Filters = ({ filters, setFilters, categories, Mycolors }) => {
   const [isCategoryFilterOpen, setIsCategoryFilterOpen] = useState(false);
@@ -38,7 +39,7 @@ const Filters = ({ filters, setFilters, categories, Mycolors }) => {
           className="filter-header"
           onClick={() => setIsCategoryFilterOpen(!isCategoryFilterOpen)} // Toggle the category filter
         >
-          <h3 style={{ fontFamily: "Space Grotesk" }}>Categories</h3>
+          <h3 style={{ fontFamily: "Space Grotesk" }}>Kateqoriyalar</h3>
           <span className={`toggle-arrow ${isCategoryFilterOpen ? "up" : ""}`}>
             {isCategoryFilterOpen ? "▲" : "▼"}
           </span>
@@ -69,9 +70,7 @@ const Filters = ({ filters, setFilters, categories, Mycolors }) => {
                 </label>
               </li>
             ))}
-            <li>
-              <a href="#">Hamısını gör</a>
-            </li>
+          
           </ul>
         </div>
       </div>
@@ -175,6 +174,7 @@ const Filters = ({ filters, setFilters, categories, Mycolors }) => {
           </ul>
         </div>
       </div>
+    
     </>
   );
 };

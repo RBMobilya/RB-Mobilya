@@ -119,7 +119,7 @@ const Header = ({ onSearch }) => {
               wordWrap: "break-word",
             }}
           >
-            Yeni Kampaniyalar
+           <Link style={{color:'white',textDecoration:'none'}} to={'/products'}>Yeni Kampaniyalar</Link> 
           </div>
           <div style={{ width: 16.5, height: 16.5, position: "relative" }}>
             <div

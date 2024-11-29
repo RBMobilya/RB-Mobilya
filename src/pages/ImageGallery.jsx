@@ -27,7 +27,7 @@ const ImageGallery = ({ images, defaultImage }) => {
               thumbnail
               className="mb-2"
               onClick={() => setSelectedImage(image)}
-              style={{ cursor: "pointer", objectFit: "cover" }}
+              style={{ cursor: "pointer", objectFit: "cover",height:'100px' }}
             />
           ))}
         </Col>

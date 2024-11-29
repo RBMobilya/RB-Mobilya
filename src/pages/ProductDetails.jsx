@@ -46,10 +46,10 @@ const ProductDetails = ({ product, selectedColor }) => {
                 marginRight: "10px",
               }}
             >
-              ${product.price}
+              {product.price}₼
             </span>
             <span style={{ color: "orange", fontWeight: "bold" }}>
-              ${product.discountedPrice}
+            {product.discountedPrice}₼
             </span>
           </>
         ) : (

@@ -120,9 +120,7 @@ const Home = () => {
                   wordBreak: "break-word",
                 }}
               >
-                Eviniz üçün dünyanın ən qəşəng malları. Hamısı düşünülmüş
-                şəkildə hazırlanmış və etik qaydalara uyğun olaraq
-                yaradılmışdır.
+              Türkiyə və Çin istehsalı fabrik məhsulları bir toxunuşla evinizdə
               </p>
             </Col>
           </Row>
@@ -139,6 +137,7 @@ const Home = () => {
                     to={`/products/category/${product.name}`}
                   >
                     <Card.Img
+                    className="card-image"
                       style={{ filter: "brightness(80%)" }}
                       src={product.image}
                       alt={product.name}
@@ -168,9 +167,7 @@ const Home = () => {
             <Col>
               <h2 className="display-6">Ən Çox Satılan Məhsullar</h2>
               <p className="lead">
-                Eviniz üçün dünyanın ən qəşəng malları. Hamısı düşünülmüş
-                şəkildə hazırlanmış və etik qaydalara uyğun olaraq
-                yaradılmışdır.
+              Müştərilərimizin seçimləri üzrə ən çox satılan məhsullardan sizdə öz dizaynınızı yarada bilərsiniz.
               </p>
             </Col>
           </Row>
@@ -208,7 +205,7 @@ const Home = () => {
                         }}
                         className="mt-auto  fw-bold"
                       >
-                        {bestsell.price}
+                        {bestsell.price}₼
                       </div>
                     </div>
                   </Link>
@@ -274,13 +271,13 @@ const Home = () => {
 
       {/* Hero banner 2  */}
 
-      <div className="section-4 d-flex justify-content-center align-items-center">
+      <div className="section-4 d-flex justify-content-center align-items-center" style={{backgroundImage: "url('/image/kanpaniyalBackground.png')"}}>
         <div className="section4-content text-center">
           <h1 className="text-white display-5">
             Yeni Kampaniyalar Artıq Əlçatandır
           </h1>
           <p className="text-white lead">
-            Evinizi ifadə etmək üçün 300-dən çox yol alın.
+          Evinizi ifadə etmək üçün hər növ mebellər.
           </p>
           <Link to="/products" style={{ color: "inherit" }}>
             <Button
@@ -305,8 +302,7 @@ const Home = () => {
           <div className="text-center mb-4">
             <h2 className="display-6">Kateqoriyalar</h2>
             <p className="lead">
-              Eviniz üçün dünyanın ən qəşəng malları. Hamısı düşünülmüş şəkildə
-              hazırlanmış və etik qaydalara uyğun olaraq yaradılmışdır.
+              Yeni model Türkiyə və Çin istehsalı mebel seçimləri!
             </p>
           </div>
           <div className="carousel-wrapper">
@@ -335,7 +331,7 @@ const Home = () => {
         </Container>
       </section>
       {/* About section  */}
-      <div className="about-section d-flex justify-content-center align-items-center">
+      <div className="about-section d-flex justify-content-center align-items-center" style={{backgroundImage: "url('/image/about-section.png')"}}>
         <div className="about-content text-center">
           <h2 className="text-white">Haqqımızda Daha Ətraflı</h2>
           <p className="text-white">
@@ -365,9 +361,8 @@ const Home = () => {
             <Col>
               <h2 className="display-6">Müştəri Məmnuniyyəti</h2>
               <p className="lead">
-                Eviniz üçün dünyanın ən qəşəng malları. Hamısı düşünülmüş
-                şəkildə hazırlanmış və etik qaydalara uyğun olaraq
-                yaradılmışdır.
+              "Bizim üçün ən vacib olan müştərilərimizin məmnuniyyətidir. 
+              Onların evlərinə əlavə etdiyimiz hər bir toxunuş, onların rahatlığı və zövqü üçün hazırlanır."
               </p>
             </Col>
           </Row>
